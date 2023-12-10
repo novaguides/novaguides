@@ -1,0 +1,1925 @@
+/* NEW CATEGORY START: applicable to all*/
+/* the applicable to all categorization is for the css rules
+that are applicable to all webpages. examples of css rules that fall under
+this category are css for the body and for the opacity of the background*/
+
+/*additional comments to be deleted once resolved are marked with !!! */
+body {
+    background-size: full;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0px;
+    height: 100%;
+    color: white;
+    font-family: inter;
+}
+
+/*background images*/
+
+/* !!! */ /*changes here*/
+body .bg-opacity { /* !!! this and bg-opcaity-long are for the low opacity dark background. maybe we can change the background itself? */
+    background-color: rgba(0, 0, 0, 0.5);
+    position: inherit;
+    width: inherit;
+    height: inherit;
+    display: inline-block;
+}
+
+.bg-opacity-long {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: -1000;
+    left: 0;
+    right: 0;
+}
+
+.main-div { /* this class is for the main div that holds everything other than the background of the body */
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 3px solid #DDB47C;
+    margin-left: 12%;
+    margin-right: 12%;
+    /* !!! maybe we can change this to id?*/
+}
+
+/* banner/header css */
+
+.banner-opacity {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 4%;
+    /* !!! maybe we can change this to id?*/
+}
+
+.logo-header {  /*!!! there is another instance of logo header at the bottom! change and compare*/
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 0.5%;
+    margin-left: 26%;
+    margin-right: 26%;
+    margin-bottom: 4%;
+    padding: 1px;
+    text-align: center;
+    color: white;
+    float: center;
+    /* !!! maybe we can change this to id?*/
+}
+
+.logo-image {
+    float: left;
+    height: 120px;
+    width: 120px;
+    margin: 5px;
+    margin-top: 0px;
+}
+
+.header-text {
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: inter;
+}
+
+/* main body css*/
+
+.text {
+    color: white;
+    /*what did i use this for*/
+}
+
+.content-body {
+    padding: 30px;
+    padding-bottom: 50px;
+    padding-left: 32%;
+    padding-top: 35px;
+    padding-right: 3%;
+}
+
+/*text inside content*/
+
+.content-header {
+    color: white;
+    font-size: 65px;
+    margin-top: -2%;
+    font-family: inter;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.699);
+    margin-bottom: 2.5%;
+    margin-left: -1%;
+}
+
+.content-text {
+    font-family: inter;
+    font-size: 18px;
+    color: white;
+    margin-top: -25px;
+}
+
+/*navigation bar*/
+
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    font-family: inter;
+    font-weight: bold;
+}
+
+.navbar a { /*!!! what is this for??*/
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*dropdown menu*/
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    margin: 0;
+    display: block;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgba(113, 113, 113, 0.2);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    margin-top: 48px;
+}
+
+.dropdown-content a { /*what does a standfor?? i think we can change it to more descriptive variable name */
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(113, 113, 113, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .search-container {
+    float: right;
+}
+
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 15px;
+    border: none;
+}
+
+.navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar .search-container button:hover {
+    background: #ccc;
+}
+
+/*for the search bar*/
+
+@media screen and (max-width: 500px) {
+    .navbar .search-container {
+        float: none;
+    }
+
+    .navbar a,
+    .navbar input[type=text],
+    .navbar .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .navbar input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+/*duplicate properties*/
+.navbar {  /*!!! there is another instance of navbar at the top, compare and change!*/
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    font-family: inter;
+    font-weight: bold;
+}
+
+.logo-header {  /*!!! there is another instance of logo-header at the top, compare and change!*/
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 0.5%;
+    margin-left: 26%;
+    margin-right: 26%;
+    margin-bottom: 4%;
+    padding: 1px;
+    text-align: center;
+    color: white;
+   /* add box shadow! */
+}
+
+.banner-opacity { /*!!! there is another instance of banner-opacity at the top, compare and change!*/
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 4%;
+    position: absolute;
+    top: 0%;
+    width: 75.7%;
+}
+
+/*banner slideshow*/
+.banner-slideshow{
+    display: inline-block;
+    display: flex;
+}
+
+.banner-image{
+    width: 149.6vh;
+    height: 31.6vh;
+    object-fit: cover;
+}
+
+.banner{
+    position: relative;
+    
+}
+
+/*arrows for slideshow*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none; /*searhc! what does user-select do*/
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .slideshow-fade{ /*!!! what does this do??*/
+    animation-name: fade;
+    animation-duration: 1.75s;
+
+    /*not sure what this does. can remove if not significant difference*/
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+  }
+
+  @keyframes fade { /*!!! what does this do??*/
+    from {opacity: .6}
+    to {opacity: 1}
+  }
+
+  /*circle indices for slideshow*/
+  .circle-container{
+    position:absolute;
+    right: 2.45vh;
+    top: 23.5vh;
+  }
+
+  .slideshow-circle, .about-circle{ /*!!! what is about circle?? check if still relevant*/
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #d3d3d300;
+    border: #ffffff solid 0.4vh;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-left: 0.80vh;
+
+    /*what does easer do in terms of transition??*/
+  }
+
+  .active, .slideshow-circle:hover {
+    background-color: #ffffff;
+  }
+
+  /*search bar*/
+  #myUL { /*!!! check if still relevant*/
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: auto;
+  }
+
+  #search-list{
+    position: absolute;
+    float: right;
+    top: 26.5vh;
+    right: 6.5vh;
+    display: none;
+  }
+
+  #search-list a{
+    display: none;
+    width:17vh;
+  }
+
+  #myInput:focus {outline: 3px solid #ddd;}
+  
+  .show {
+    display:block;
+}
+
+/*APPLICABLE TO ALL CATEGORY END*/
+
+/*---------------------------------------------------------------*/
+
+/*NEW CATEGORY START: homepage*/
+.traveler-img { /*for the changeable main character on homepage*/
+    max-height: 65%;
+    position: absolute;
+    left: 12%;
+    top: 33.5%;
+    filter: drop-shadow(9px 7px 8px black);
+    transition: 0.2s ease-in;
+}
+
+.traveler-img:hover {
+    transform: translateY(7px);
+    filter: drop-shadow(9px 7px 8px rgba(255, 229, 58, 0.288));
+    transition: 0.2s ease-out;
+}
+
+/*video and install*/
+
+.video { /*!!! for the video on the homepage. since the height and width is specific should we change this to #home_video? */
+    height: 402px;
+    width: 76%;
+}
+
+.install-table {
+    float: right;
+    margin-top: -3px;
+}
+
+.install {
+    height: 63px;
+    margin-bottom: 14px;
+}
+/*HOMEPAGE CATEGORY END*/
+
+
+/*---------------------------------------------------------------*/
+
+
+/*NEW CATEGORY START: contact page*/
+#content-contact {
+    padding-bottom: 8vh;
+}
+
+#feedbackform { /*need to check if this id is being used*/
+    margin-left: 20%;
+    width: 50%;
+}
+
+#email-body {
+    /*somehow make this bigger*/
+    width: 150%;
+    font-size: 150%;
+    margin: 3px;
+    font-family: inter;
+}
+
+#subject-area {
+    width: 70%;
+    font-size: 150%;
+    margin: 3px;
+    font-family: inter;
+}
+
+#submit-button {
+    float: right;
+    margin-right: -51.5%;
+    font-size: 120%;
+    font-family: inter;
+}
+
+#form-desc {
+    position: absolute;
+    top: 35vh;
+    left: 30vh;
+}
+
+#form-header {
+    font-size: 250%;
+}
+
+#row-space {
+    margin-top: 5px;
+}
+/*CONTACT PAGE CATEGORY END*/
+
+
+/*---------------------------------------------------------------*/
+
+
+/*NEW CATEGORY START: character pages */
+.visionweapon { /*what is this specifically for??*/
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.char-img {
+    position: absolute;
+    height: 760px;
+    margin-top: 57px;
+    margin-left: 25px;
+    filter: drop-shadow(9px 7px 8px black);
+    z-index: 1;
+}
+
+.char-video {
+    height: 402px;
+    width: 76%;
+    margin-left: 12%;
+}
+
+/*talent section*/
+.talent-content {
+    background-color: #698bb1;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    position: relative;
+    overflow: hidden;
+}
+
+.talent-gif-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.talent-gif-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56%;
+    height: 100%;
+    background: linear-gradient(to right, #698bb1, transparent);
+    z-index: 2;
+}
+
+.talent-gif {
+    position: right;
+}
+
+#t1 { /*for talents? */
+    height: 432px;
+    width: 600px;
+}
+
+#t2 {
+    height: 600px;
+    width: 620px;
+}
+
+#t3 {
+    height: 504px;
+    width: 600px;
+}
+
+
+.talent-text {
+    font-family: inter;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    margin-left: 2.3%;
+    margin-top: -20px;
+}
+
+.talent-title {
+    font-family: inter;
+    font-size: 35px;
+    text-align: left;
+    color: white;
+    margin-top: -4.7%;
+    margin-bottom: 5%;
+    margin-left: 11%;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.talent-img {
+    position: left;
+    max-height: 100px;
+    max-width: 100px;
+    margin-right: 100%;
+    margin-left: 2.2%;
+}
+
+/*passive section*/
+.passive-content {
+    position: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.passive-text {
+    font-family: inter;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.passive-title {
+    font-family: inter;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 2%;
+}
+
+.passive-img {
+    position: center;
+    width: 150px;
+    height: 150px;
+    padding-bottom: 5%;
+}
+
+.passive-img-container {
+    width: 160px;
+    height: 160px;
+    background-color: rgb(105, 139, 177);
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.passive-img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+table.GeneratedTable { /* !!! what is this for?? */
+    width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-width: 0px;
+    border-color: transparent;
+    border-style: solid;
+    color: white;
+    text-align: center;
+    table-layout: fixed;
+}
+
+table.GeneratedTable td,
+table.GeneratedTable th { /* !!! what is this for?? */
+    border-width: 0px;
+    border-color: #ffffff;
+    border-style: solid;
+    padding: 10px;
+    vertical-align: top;
+}
+
+table.GeneratedTable thead { /* !!! what is this for?? */
+    background-color: transparent;
+}
+
+/*constellation section*/
+
+.cons-content {
+    position: center;
+    text-align: center;
+    padding-bottom: 30%;
+}
+
+.cons-text {
+    font-family: inter;
+    font-size: 19px;
+    text-align: center;
+    color: white;
+
+}
+
+.cons-title {
+    font-family: inter;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.cons-icon {
+    width: 100px;
+    height: 100px;
+    position: center;
+    text-align: center;
+}
+
+.cons-img {
+    margin-left: 88%;
+    width: 800px;
+    margin-top: -2%;
+    filter: drop-shadow(7px 7px 7px rgba(177, 239, 255, 0.365));
+}
+
+.constellation-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.point { /* !!! what is this for?? */
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #f3b249;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#star1 {
+    left: 596px;
+    top: 120px;
+}
+
+#star2 {
+    left: 465px;
+    top: 305px;
+}
+
+#star3 {
+    left: 780px;
+    top: 410px;
+}
+
+#star4 {
+    left: 570px;
+    top: 595px;
+}
+
+#star5 {
+    left: 800px;
+    top: 670px;
+}
+
+#star6 {
+    left: 1020px;
+    top: 470px;
+}
+
+.point:hover {
+    background-color: rgb(255, 216, 86);
+    box-shadow: 0 0 30px rgb(255, 255, 255), 0 0 60px rgb(255, 255, 255), 0 0 50px rgb(255, 255, 255);
+}
+
+.point:hover .description {
+    display: block;
+}
+
+
+.description { /* !!! change to more descriptive variable name */
+    display: none;
+    background-color: rgb(105, 139, 177);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 300px;
+}
+
+/*Table of contents navbar*/
+.toc-navbar { /*!!! this for toc of character right??*/
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    font-family: inter;
+    font-weight: bold;
+    padding: 10px;
+    position: center;
+}
+
+.toc-navbar a {
+    float: center;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 14px 23px;
+    text-decoration: none;
+}
+
+.toc-navbar a:hover {
+    background-color: rgba(113, 113, 113, 0.2);
+}
+
+.region-img { /* !!! what is this for?? */
+    position: absolute;
+    width: 25%;
+    margin-top: 10%;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+/*Ascension guide*/
+.ascension-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.toggle-button {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-family: inter;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-button:hover {
+    background-color: rgba(113, 113, 113, 0.491);
+}
+
+
+#toggle-image {
+    display: none;
+}
+
+#hidden-image { /* !!! what is this for?? */
+    max-width: 70%;
+    display: none;
+}
+
+#toggle-image:checked+#hidden-image {
+    display: block;
+}
+
+#toggle-image:checked+.toggle-button {
+    background-color: rgba(113, 113, 113, 0.2);
+}
+
+/*artifact section*/
+
+.arts-content {
+    position: center;
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+.arts-text {
+    font-family: inter;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.stat-table {
+    margin-left: 10%;
+    overflow: auto;
+    width: 20%;
+}
+
+.stat-table table {
+    border: 1px transparent;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: center;
+}
+
+.stat-table th {
+    background-color: transparent;
+    padding: 40px;
+}
+
+.stat-table td {
+    border: 1px solid transparent;
+    padding: 40px;
+}
+
+.arts-text {
+    font-family: inter;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.arts-minorheader {
+    font-family: inter;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 2%;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.699);
+}
+
+.arts-title {
+    font-family: inter;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 2%;
+}
+
+.arts-img {
+    position: center;
+    width: 110px;
+    height: 110px;
+}
+
+.arts-img-container {
+    width: 130px;
+    height: 130px;
+    background-color: #698bb1;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+}
+
+.set-title {
+    font-family: inter;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.set-text {
+    font-family: inter;
+    font-size: 19px;
+}
+
+.set-desc {
+    font-family: inter;
+    font-size: 17px;
+    padding-top: 15px;
+}
+
+.set-table {
+    overflow: auto;
+    width: 55%;
+    margin-left: 35%;
+    margin-top: -70%;
+}
+
+.set-table table {
+    border: 1px solid #DEDEDF;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: center;
+}
+
+.set-table caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.set-table th {
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+.set-table td {
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+.set-img {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+/*weapon section*/
+
+.wep-title {
+    font-family: inter;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.wep-content {
+    position: center;
+    text-align: center;
+    margin-bottom: 20%;
+    margin-top: 10%;
+}
+
+.weapon-table {
+    overflow: auto;
+    width: 70%;
+    margin-left: 17%;
+}
+
+.weapon-table table {
+    border: 1px solid transparent;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.weapon-table th {
+    border: 1px solid transparent;
+    color: #ffffff;
+}
+
+.weapon-table td {
+    border: 1px solid transparent;
+    color: #ffffff;
+}
+
+.wep-img {
+    width: 150px;
+    height: 150px;
+    text-align: right;
+}
+
+.wep-img:hover {
+    transform: translateY(-7px);
+}
+
+.wep-name {
+    font-family: inter;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+}
+
+.wep-text {
+    font-family: inter;
+    font-size: 18px;
+    color: white;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.table-mod {
+    width: 250px
+}
+
+.table-modalt {
+    width: 700px
+}
+
+.most-wep {
+    position: absolute;
+    margin-left: 2%;
+}
+
+.least-wep {
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 72%;
+}
+
+.sec-header {
+    /*header for all*/
+    margin-top: 50px;
+    text-align: center;
+    font-family: inter;
+    font-size: 45px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+}
+
+/*team composition*/
+.team-content {
+    margin-bottom: 80%;
+}
+
+.team-table {
+    position: absolute;
+    overflow: visible;
+    width: 35%;
+    margin-left: 33%;
+    margin-top: 5%;
+}
+
+.team-table table {
+    border: 1px solid transparent;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.team-table caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.team-table th {
+    border: 1px solid transparent;
+    color: #000000;
+    padding: 5px;
+}
+
+.team-table td {
+    border: 1px solid transparent;
+    color: #000000;
+    padding: 5px;
+}
+
+.team-img {
+    padding-right: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.plus { /* !!! what is this for?? */
+    padding-right: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.team-img:hover {
+    transform: translateY(7px);
+}
+
+.pointtem { /* !!! what is this for?? */
+    cursor: pointer;
+    font-family: inter;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+}
+
+.pointtem:hover {
+    background-color: rgba(105, 139, 177, 0.4);
+}
+
+.pointtem:hover .description1 {
+    display: block;
+}
+
+.description1 { /* !!! what is this for?? */
+    display: none;
+    background-color: rgb(105, 139, 177);
+    color: #fff;
+    padding: 5%;
+    border-radius: 5px;
+    position: absolute;
+    right: 45%;
+    transform: translateX(-50%);
+    width: 50%;
+    z-index: 2;
+}
+
+.team-vision { /* !!! what is this for?? */
+    position: absolute;
+    width: 25%;
+    margin-top: 10%;
+    z-index: 0;
+    opacity: 0.3;
+    margin-left: 2%;
+}
+
+/*summary section*/
+.sum-content {
+    margin-bottom: 10%;
+}
+
+.sum-table {
+    overflow: auto;
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.sum-table table {
+    border: 1px solid transparent;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.sum-table th {
+    border: 1px solid transparent;
+    color: #ffffff;
+}
+
+.sum-table td {
+    border: 1px solid transparent;
+    color: #ffffff;
+    padding-top: 5%;
+}
+
+.sum-img {
+    width: 100px;
+    height: 100px;
+    margin-left: 50%;
+    margin-bottom: 10%;
+}
+
+.sum-name {
+    font-family: inter;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+}
+
+.sum-text {
+    font-family: inter;
+    font-size: 18px;
+    color: white;
+    padding-top: 5px;
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.sum-mod {
+    width: 100px
+}
+
+.sum-modalt {
+    width: 200px
+}
+
+.rarity {
+    position: absolute;
+    margin-top: -4%;
+    margin-left: -1.2%;
+}
+
+/*constellations*/
+.cons-btn {
+    background-color: #f3b249;
+    /* Change the background color */
+    color: white;
+    font-family: inter;
+    padding: 40px;
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Customize the button hover effects */
+.cons-btn:hover {
+    background-color: #f5d76e;
+    /* Change the background color on hover */
+    color: black;
+    /* Change the text color on hover */
+}
+
+.cons-btn-containerl {
+    text-align: left;
+    position: absolute;
+    top: 25%;
+    /* Adjust the top position as needed */
+    left: 30%;
+    /* Adjust the left position as needed */
+}
+
+.cons-btn-containerr {
+    text-align: right;
+    position: absolute;
+    top: 25%;
+    /* Adjust the top position as needed */
+    left: 308%;
+    /* Adjust the left position as needed */
+}
+/*CHARACTER PAGES CATEGORY END*/
+
+
+/*---------------------------------------------------------------*/
+
+
+/*START OF CATEGORY: weapon pages */
+/* weapons*/
+.toggle-label {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    font-family: inter;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.toggle-label:hover {
+    background-color: rgba(113, 113, 113, 0.2);
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1;
+    font-family: inter;
+    font-size: 17px;
+
+}
+
+.toggle-checkbox:checked+.toggle-label+.toggle-content {
+    display: block;
+}
+
+.toggle-content+.toggle-label {
+    margin-top: 30px;
+}
+
+.wep-front {
+    font-family: inter;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+.weapon-rec {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.wep-team-img {
+    padding: 20px;
+}
+
+.wep-team-img:hover {
+    transform: translateY(-7px);
+}
+/*WEAPON CATEGORY END*/
+
+
+/*---------------------------------------------------------------*/
+
+
+ /*!!! should we make this its own file*/
+/*NEW CATEGORY START: back to top*/
+/* BACK TO TOP */
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #698bb1;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top span {
+    color: #fff;
+    font-size: 3rem;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+    background-color: #3d4f63;
+}
+
+.back-to-top:hover span {
+    transform: translateY(-4px);
+}
+/*BACK TO TOP CATEGORY END*/
+
+
+/*---------------------------------------------------------------*/
+
+
+/*NEW CATEGORY START: directories*/
+#character-directory,
+#weapon-directory {
+    margin-left: -45%;
+    margin-top: 2%;
+    padding-left: 2vh;
+}
+
+/*these are (mostly)copy pasted*/
+/*character icons*/
+/*!!! revise!!*/
+
+.character-list,
+.weapon-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow elements to wrap */
+    align-items: flex-start;
+    justify-content: center;
+    /* Adjust this based on your design */
+    padding: 10px;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    /* Adjust this value as needed */
+
+}
+
+.character-list .character-portrait,
+.weapon-list .weapon-portrait {
+    flex: 0 0 20%;
+    /* Adjust the width as needed to control the number of elements in each row */
+    max-width: 20%;
+    /* Adjust the max-width as needed */
+}
+
+.character-list .character-portrait,
+.weapon-list .weapon-portrait {
+    width: 16.66%;
+}
+
+.character-list .character-portrait,
+.weapon-list .weapon-portrait {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12.5%;
+    padding: 15px;
+    margin-left: -4%;
+}
+
+.character-portrait .character-icon,
+.weapon-icon {
+    width: 60%;
+    height: 60%;
+    background: #ffffff;
+    border-radius: 4px;
+
+    /*what does transform do*/
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+
+    filter: drop-shadow(9px 7px 8px rgba(0, 0, 0, 0.171));
+}
+
+.character-icon:hover,
+.weapon-icon:hover {
+    transform: scale(1.20);
+}
+
+.character-portrait .sideprev,
+.weapon-portrait .sideprev {
+    position: fixed;
+    right: 273px;
+    top: 297px;
+    display: none;
+
+    /*what does transform do*/
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+.character-portrait:hover .sideprev,
+.weapon-portrait:hover .sideprev {
+    display: block;
+}
+
+.previewimg {
+    width: auto;
+    height: 69vh;
+    filter: drop-shadow(9px 7px 8px black);
+}
+
+/*background-color per element*/
+/*is it okay na this is id?*/  /*!!! maybe change to class considering multiple elements will use this?*/
+
+#geo-portraitbg {
+    background-color: rgba(253, 191, 75, 0.625);
+}
+
+#hydro-portraitbg {
+    background-color: rgb(71, 71, 253, 0.625);
+}
+
+#cryo-portraitbg {
+    background-color: rgb(158, 209, 255, 0.625);
+}
+
+#pyro-portraitbg {
+    background-color: rgb(237, 47, 47, 0.625);
+}
+
+#dendro-portraitbg {
+    background-color: rgb(11, 89, 11, 0.625);
+}
+
+#anemo-portraitbg {
+    background-color: rgb(88, 247, 186, 0.625);
+}
+
+#electro-portraitbg {
+    background-color: rgb(117, 21, 117, 0.625);
+}
+
+
+/* weapon backgrounds*/
+.wp-rarity5 {
+    background-image: url(https://rerollcdn.com/STARRAIL/Rarity/5_sm.png) !important;
+}
+
+.wp-rarity4 {
+    background-image: url(https://rerollcdn.com/STARRAIL/Rarity/4_sm.png) !important;
+}
+
+.wp-rarity3 {
+    background-image: url(https://rerollcdn.com/STARRAIL/Rarity/3_sm.png) !important;
+}
+
+
+
+.rarity-4,
+.rarity-5 {  /*!!! what is this for?*/
+    background-size: contain !important;
+    background-position: 50% !important;
+}
+
+.character-name {
+    width: 100%;
+    font-size: 125%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    color: #ffffff;
+    margin: 10px 0 0;
+    white-space: nowrap;
+    font-family: inter;
+}
+
+.weapon-name {
+    width: 100%;
+    font-size: 110%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    color: #ffffff;
+    margin: 10px 0 0;
+    white-space: nowrap;
+    font-family: inter;
+}
+
+/*trying to make it scrollable*/
+
+#scroll {
+    width: 100vh;
+    height: 51.25vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: -2vh;
+    margin-top: -1vh;
+}
+
+/*filter sections*/
+.filter-buttons {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    /* Adjust this value as needed */
+}
+
+.filter-buttons img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.filter-buttons img:hover {
+    transform: scale(1.1);
+    /* Adjust the scale as needed */
+}
+
+
+.filter-buttons button {
+    margin: 0 10px;
+    font-family: inter;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: rgba(113, 113, 113, 0.445);
+}
+
+.filter-buttons2 {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    /* Adjust this value as needed */
+}
+
+.filter-buttons2 img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.filter-buttons2 img:hover {
+    transform: scale(1.1);
+    /* Adjust the scale as needed */
+}
+
+.filter-buttons2 button {
+    margin: 0 10px;
+    font-family: inter;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons2 button:hover {
+    background-color: rgba(113, 113, 113, 0.445);
+}
+/*DIRECTORIES CATEGORY END*/
+
+
+/*---------------------------------------------------------------*/
+
+
+ /*NEW CATEGORY START: about page*/
+ /*!!! what is this for? - might delete this*/
+ /*
+.about-bookmarks {
+    margin-left: -45vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.bookmark-list {
+    color: white;
+    font-family: inter;
+    font-size: 3vh;
+}
+
+.bookmark-list:hover {
+    font-weight: bolder;
+}*/
+
+.subheading {  /*!!! what is this for?*/
+    color: white;
+    font-family: inter;
+    font-size: 4vh;
+    margin-top: -3.5vh;
+    margin-bottom: -1.5vh;
+}
+
+.about-novaguides,
+.about-builds {
+    background-image: url(Genshin4k.jpg);
+    margin-left: -47.9vh;
+    margin-right: -4.4vh;
+    padding-right: 6vh;
+    text-align: right;
+    margin-bottom: -3.5vh;
+}
+
+.bg-opacity-partial {  /*!!! what is this for?*/
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: 0vh;
+    padding-left: 5vh;
+    padding-bottom: 4vh;
+    padding-top: 6vh;
+    margin-right: -6vh;
+    padding-right: 5vh;
+}
+
+.about-header {  /*!!! what is this for?*/
+    color: white;
+    font-weight: bold;
+    font-size: 8vh;
+    font-family: inter;
+    margin-top: -3vh;
+    margin-bottom: 2vh;
+    margin-left: -1vh;
+    margin-right: -0.5vh;
+    filter: drop-shadow(9px 7px 8px black);
+
+}
+
+.about-genshin {
+    margin-left: -45vh;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.contact-info { 
+    color: white;
+    margin-bottom: -1vh;
+    font-family: inter;
+}
+
+.table-cell { /*!!! change to more descriptive variable name*/
+    padding-right: 12vh;
+}
+
+/*new about css rules, compare and change!*/
+
+.about-text{
+    font-family: inter;
+    font-size: 1.8vh;
+    color: white;
+    margin-top: -25px;
+    filter: drop-shadow(9px 7px 8px black);
+  }
+
+
+.about-section {
+    margin-left: -50vh;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    padding-left: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    padding-right: 1.5vh;
+    display: block;
+    
+}
+
+.aboutnova{
+    margin-top:-3vh;
+}
+
+.about-section:hover{
+    background-color: #00000039;
+    transform: scale(1.5);
+    transform: translateX(1.7vh);
+}
+
+.onecolumn{ /*!!! what is this??*/
+    width: 30%;
+    display: inline-block;
+}
+
+.onecolumn hr{
+    margin-left: -45vh;
+    width: 250%;
+    height: 3px;
+}
+
+#about-image{
+    float: right;
+    position: absolute;
+    right: 20vh;
+    top: 38vh;
+}
+
+#Paimon{ /*for about page*/
+    float: right;
+    height: 130vh;
+    object-fit: cover;
+    filter: drop-shadow(9px 7px 8px black);
+}
+
+.circle-about{ /*check if still relevant | what is the difference with this and about circle?*/
+    position:absolute;
+    right: 90.45vh;
+    top: 63.5vh;
+  }
+/*ABOUT PAGE CATEGORY END*/
+
+
+/*---------------------------------------------------------------*/
+
+
+ /*NEW CATEGORY START: artifacts*/
+/*artifacts*/
+
+.about-artifacts {
+    margin-left: -45vh;
+    margin-top: -2.4vh;
+    margin-right: -4.8vh;
+    margin-bottom: 4vh;
+    padding: 4vh;
+    padding-left: 1vh;
+}
+
+
+.artifacts {
+    margin-top: -3.6vh;
+    margin-bottom: 2vh;
+    margin-left: -0.1vh;
+    padding: 2vh;
+    padding-left: 5vh;
+    padding-top: 7vh;
+    margin-right: -4vh;
+    filter: drop-shadow(9px 7px 8px black);
+}
+
+.artifact-parent {
+    margin-left: -48vh;
+    margin-top: -2.4vh;
+    margin-right: -4.8vh;
+    margin-bottom: 3.4vh;
+    border-bottom: 3px dotted #f3b249a4;
+}
+
+/*aritfact background colors*/
+
+#arti-rarity3 {
+    background-color: rgba(81, 81, 255, 0.151);
+}
+
+#arti-rarity4 {
+    background-color: rgba(102, 17, 181, 0.15);
+}
+
+#arti-rarity5 {
+    background-color: rgba(236, 161, 22, 0.15);
+}
+
+.artifact-header {
+    color: white;
+    font-weight: bold;
+    font-size: 8vh;
+    font-family: inter;
+    margin-top: -3vh;
+    margin-bottom: 2vh;
+    margin-left: -1vh;
+    margin-right: -0.5vh;
+}
+
+.artifact-parent:hover .arti-info {
+    display: block;
+
+    /*what does transform do*/
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+.arti-info {
+    display: none;
+}
+
+.table-left {
+    text-align: left;
+    margin-top: -2.5vh;
+    margin-left: -1.5vh;
+    padding-top: 0;
+    font-size: 2vh;
+}
+
+
+.artifact-td-left {
+    padding-right: 10vh;
+    margin-bottom: -20vh;
+}
+
+/*ARTIFACTS CATEGORY END*/
+
+
+/*---------------------------------------------------------------*/
+
+
+/*UNKNOWN CATEGORY*/
+ /*!!! what is this for?*/
+/*styles for links*/
+a:link {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+html { /*!!! what is this for? UNKNOWN*/
+    scroll-behavior: smooth;
+}

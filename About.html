@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!--placeholder favicon-->
+  <link rel="stylesheet" href="StyleSheet.css"> <!--embedded style sheet-->
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet">
+</head>
+
+<body class="defaultbg">
+  <div class="bg-opacity">
+    <div class="main-div"> <!--when calling class in stylesheet make sure to use full stop-->
+      
+        <!-- banner changes start here (need to copy past)-->
+        
+        <div class="banner-slideshow"> <!--div for header/banner-->
+          <div class="banner slideshow-fade">
+              <img src="Banners/Banner1.jpg" class="banner-image">
+          </div>
+
+          <div class="banner slideshow-fade">
+              <img src="Banners/Banner2.jpg" class="banner-image">
+          </div>
+          
+          <div class="banner-opacity">
+              <div class="logo-header"> <!--div for name and logo-->
+                 <table>
+                  <tr>
+                     <td> <img src="logo.png" id="logo-image"></td>
+                      <td><h1 class="header-text">NOVA GUIDES</h1> <!--change font for this--></td>
+                  </tr>
+                 </table>
+              </div>
+
+              <div class="circle-container">
+                  <span class="slideshow-circle" onclick="currentSlide(1)"></span>
+                  <span class="slideshow-circle" onclick="currentSlide(2)"></span>
+              </div>
+
+              <div class="navbar"><!--div for nav bar-->
+                  <a href="Home.html">Home</a>
+                  <div class="dropdown">
+                      <a class="dropbtn">Guides <!--change to button if dropdown should be under "guides"-->
+                          <i class="fa fa-caret-down"></i>
+                      </a>
+                      <div class="dropdown-content">
+                          <a href="Characters.html">Characters</a>
+                          <a href="Weapons.html">Weapons</a>
+                          <a href="Artifacts.html">Artifacts</a>
+                      </div>
+                  </div>
+                  <a href="About.html">About</a>
+                  <a href="Contact.html">Contact</a>
+
+                  <!--searchbar changes start here-->
+
+                  <div class="search-container">
+                      <form autocomplete="off">
+                          <!--changes made to search bar!-->
+                          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                          <button type="submit" onclick="filterFunction()"><i class="fa fa-search"></i></button>
+                      </form>
+
+                      <div class="dropdown">
+                          <div id="search-list" class="dropdown-content">
+                              <!--navbar-->
+                              <a href="About.html">About</a>
+                              <a href="Characters.html">Characters</a>
+                              <a href="Weapons.html">Weapons</a>
+                              <a href="Contact.html">Contact</a>
+                              <a href="Artifacts.html">Artifcats</a>
+                              
+                              <!--characters--> <!--change the html links on the character and weapon page-->
+                              <a href="Eula.html">Eula</a>
+                              <a href="Albedo.html">Albedo</a>
+                              <a href="Alhaitham.html">Alhaitham</a>
+                              <a href="Aloy.html">Aloy</a>
+                              <a href="Amber.html">Amber</a>
+                              <a href="Itto.html">Arataki Itto</a>
+                              <a href="Baizhu.html">Baizhu</a>
+                              <a href="Barbara.html">Barbara</a>
+                              <a href="Beidou.html">Beidou</a>
+                              <a href="Bennett.html">Bennett</a>
+
+
+                              <!--weapons-->
+                              <a href="SoBP.html">Song of Broken Pines</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <script src="Search.js"></script> <!--transfer to near end of body-->
+
+                  <!--search bar ends here-->
+
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          </div>
+      </div>
+
+      <script src="Slideshow.js"></script>  <!--transfer to near end of body-->
+
+      <!--banner changes end here-->
+
+      <div class="content-body"> <!--div for content--> <!--stuff is adjusted to comlab screen-->
+        <table>
+          <tr>
+            <td>
+              <table id="about-infotable">
+                <tr>
+                  <td><h1 class="about-header">NOVA GUIDES</h1></td>
+                </tr>
+                <tr>
+                  <td><p class="about-text">NovaGuides is website dedicated to providing Genshin players - <br>
+                    both old and new- with information that can vastly improve their <br>
+                    experience when fighting in the game. From farming mobs to <br>
+                    clearing boss dungeons quicker, 
+                    NovaGuides gives informmation on a character's ideal weapons, team, and
+                    artifacts while also showcasing that same character's skills, passives, and  
+                    even constellations (the resulting upgrade after getting multiple copies of a 
+                    character.) A nova signals the birth of a new star and NovaGuides is a sign 
+                    of your new and improved life in Genshin Impact.</p></td>
+                </tr>
+                <tr>
+                  <td><h1 class="about-header">GENSHIN IMPACT</h1></td>
+                </tr>
+                <tr>
+                  <td> <p class="about-text"><a href=".hoyoverse.com/en/" style="color: white;">Genshin Impact</a> is a
+                    free-to-play action role-playing game developed and published by miHoYo Co., Ltd. Outside of China, 
+                    the publisher is miHoYo's subsidiary Cognosphere Pte., Ltd. d/b/a HoYoverse. The game 
+                    features a fantasy open-world environment and action based combat system using
+                    elemental magic, character switching, and a gacha monetization system for players to 
+                    obtain new characters, weapons, and other resources. The game can only be played with an 
+                    internet connection and features a limited multiplayer mode allowing up to four players in a world.
+                  </p></td>
+                </tr>
+                <tr>
+                  <td><h1 class="about-header">BUILDS</h1></td>
+                </tr>
+                <tr>
+                  <td><p class="about-text"> As defined by <a href="https://www.cyberdefinitions.com/definitions/BUILD.html"
+                    style="color: white;">CyberDefinitions</a>, 
+                  <b>BUILD</b> means Arrangement of Items, Skills, Etc. in a gaming context.
+                  In gaming, <b>BUILD</b> refers to the specific arrangement of items, skills, etc.,
+                  selected by a player to best equip a character for the tasks 
+                  expected to be encountered at a certain stage of a game.
+                  The chosen <b>BUILD</b> will normally be based on the character's 
+                  specific features, as well as the player's style of play.</p></td>
+                </tr>
+                <tr>
+                  <td><h1 class="about-header">REFERENCES</h1></td>
+                </tr>
+                <tr>
+                  <td><p class="about-text" style="color: white;">
+                    Portrait Renders from DEG5270 on <a href="https://www.deviantart.com/deg5270/gallery">DeviantArt</a><br>
+                    Icons from <a href="https://genshin.gg">Genshin.GG</a><br>
+                    Background Image from <a href="https://genshin.hoyoverse.com/en/">Hoyoverse</a><br>
+                    Videos from <a href="https://www.youtube.com/c/GenshinImpact?themeRefresh=1">Genshin Official Youtube
+                      Channel</a><br>
+                    Information from Hoyoverse<br>
+                  </p></td>
+                </tr>
+              </table>
+            </td>
+            <td><img src="Paimon.webp" id="Paimon"></td>
+          </tr>
+        </table>
+    </div>
+    </div>
+  </div>
+</body>
+
+</html>

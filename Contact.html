@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!--placeholder favicon-->
+  <link rel="stylesheet" href="StyleSheet.css"> <!--embedded style sheet-->
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet">
+</head>
+
+<body class="defaultbg">
+  <div class="bg-opacity">
+    <div class="main-div"> <!--when calling class in stylesheet make sure to use full stop-->
+     
+      
+            <!-- banner changes start here (need to copy past)-->
+           
+            <div class="banner-slideshow"> <!--div for header/banner-->
+              <div class="banner slideshow-fade">
+                  <img src="Banners/Banner1.jpg" class="banner-image">
+              </div>
+
+              <div class="banner slideshow-fade">
+                  <img src="Banners/Banner2.jpg" class="banner-image">
+              </div>
+              
+              <div class="banner-opacity">
+                  <div class="logo-header"> <!--div for name and logo-->
+                     <table>
+                      <tr>
+                         <td> <img src="logo.png" id="logo-image"></td>
+                          <td><h1 class="header-text">NOVA GUIDES</h1> <!--change font for this--></td>
+                      </tr>
+                     </table>
+                  </div>
+
+                  <div class="circle-container">
+                      <span class="slideshow-circle" onclick="currentSlide(1)"></span>
+                      <span class="slideshow-circle" onclick="currentSlide(2)"></span>
+                  </div>
+
+                  <div class="navbar"><!--div for nav bar-->
+                      <a href="Home.html">Home</a>
+                      <div class="dropdown">
+                          <a class="dropbtn">Guides <!--change to button if dropdown should be under "guides"-->
+                              <i class="fa fa-caret-down"></i>
+                          </a>
+                          <div class="dropdown-content">
+                              <a href="Characters.html">Characters</a>
+                              <a href="Weapons.html">Weapons</a>
+                              <a href="Artifacts.html">Artifacts</a>
+                          </div>
+                      </div>
+                      <a href="About.html">About</a>
+                      <a href="Contact.html">Contact</a>
+
+                      <!--searchbar changes start here-->
+
+                      <div class="search-container">
+                          <form autocomplete="off">
+                              <!--changes made to search bar!-->
+                              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                              <button type="submit" onclick="filterFunction()"><i class="fa fa-search"></i></button>
+                          </form>
+
+                          <div class="dropdown">
+                              <div id="search-list" class="dropdown-content">
+                                  <!--navbar-->
+                                  <a href="About.html">About</a>
+                                  <a href="Characters.html">Characters</a>
+                                  <a href="Weapons.html">Weapons</a>
+                                  <a href="Contact.html">Contact</a>
+                                  <a href="Artifacts.html">Artifcats</a>
+                                  
+                                  <!--characters--> <!--change the html links on the character and weapon page-->
+                                  <a href="Eula.html">Eula</a>
+                                  <a href="Albedo.html">Albedo</a>
+                                  <a href="Alhaitham.html">Alhaitham</a>
+                                  <a href="Aloy.html">Aloy</a>
+                                  <a href="Amber.html">Amber</a>
+                                  <a href="Itto.html">Arataki Itto</a>
+                                  <a href="Baizhu.html">Baizhu</a>
+                                  <a href="Barbara.html">Barbara</a>
+                                  <a href="Beidou.html">Beidou</a>
+                                  <a href="Bennett.html">Bennett</a>
+
+
+                                  <!--weapons-->
+                                  <a href="SoBP.html">Song of Broken Pines</a>
+                              </div>
+                          </div>
+                      </div>
+
+                      <script src="Search.js"></script> <!--transfer to near end of body-->
+
+                      <!--search bar ends here-->
+
+                  </div>
+
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              </div>
+          </div>
+
+          <script src="Slideshow.js"></script>  <!--transfer to near end of body-->
+
+          <!--banner ends here-->
+          
+      <div class="content-body"> <!--div for content--> <!--stuff is adjusted to comlab screen-->
+
+        <table id="contact-table">
+          <tr>
+            <td id="contact-tableinfo"> <!--first td is for the text or info found on the contact page-->
+              <table>
+                <tr>
+                  <td><h1 class="contact-info">Reach out to us!</h1></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="contact-info" id="row-space">
+                      In case you have any questions, concerns, or would just
+                      like to reach out to us, you can do so through the form on 
+                      the right or through the following platforms below.
+                      </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table>
+                      <tr>
+                        <td><table id="left-contactinfo">
+                          <tr><td><h2 class="contact-info">Renzel Alferez</h2></td></tr>
+                          <tr><td><p class="contact-info">+63 915 924 6617</p></td></tr>
+                          <tr><td><p class="contact-info">renzellalferez@su.edu.ph</p></td></tr>
+                        </table></td>
+                        <td><table>
+                          <tr><td><h2 class="contact-info">Trois Aeka Uriarte</h2></td></tr>
+                          <tr><td> <p class="contact-info">+63 946 062 7902</p></td></tr>
+                          <tr><td> <p class="contact-info">troisauriarte@su.edu.ph</p></td></tr>
+                        </table>       
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+            <td>
+              <form id="feedbackform" action="/swiftmailer_form.php" method="POST">
+                <!--sends email to indicated email address-->
+                <table id="form-table">
+                  <tr><td>
+                    <input id="subject-area" type="text" placeholder="Subject" name="subject" required />
+                  </td></tr>
+
+                  <tr><td>
+                    <textarea id="email-body" rows="15" placeholder="Enter your message here" name="body" required></textarea>
+                  </td></tr>
+
+                  <tr><td>
+                    <button type="submit" id="submit-button">Submit</button> <!--is this html?? this is still html diba-->
+                  </td></tr>
+
+                </table>
+              </form>
+            </td> <!--for the feedback form input area-->
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+</body>
+
+</html>

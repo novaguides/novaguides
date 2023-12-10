@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eula Build Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!--placeholder favicon-->
+    <link rel="stylesheet" href="StyleSheet.css"> <!--embedded style sheet-->
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="twah.js" defer></script>
+</head>
+
+<body class="cryobg">
+    <div class="bg-opacity-long">
+        <div class="main-div"> <!--when calling class in stylesheet make sure to use full stop-->
+            
+             <!-- banner changes start here (need to copy past)-->
+           
+            <div class="banner-slideshow"> <!--div for header/banner-->
+                <div class="banner slideshow-fade">
+                    <img src="Banners/Banner1.jpg" class="banner-image">
+                </div>
+
+                <div class="banner slideshow-fade">
+                    <img src="Banners/Banner2.jpg" class="banner-image">
+                </div>
+                
+                <div class="banner-opacity">
+                    <div class="logo-header"> <!--div for name and logo-->
+                       <table>
+                        <tr>
+                           <td> <img src="logo.png" id="logo-image"></td>
+                            <td><h1 class="header-text">NOVA GUIDES</h1> <!--change font for this--></td>
+                        </tr>
+                       </table>
+                    </div>
+
+                    <div class="circle-container">
+                        <span class="slideshow-circle" onclick="currentSlide(1)"></span>
+                        <span class="slideshow-circle" onclick="currentSlide(2)"></span>
+                    </div>
+
+                    <div class="navbar"><!--div for nav bar-->
+                        <a href="Home.html">Home</a>
+                        <div class="dropdown">
+                            <a class="dropbtn">Guides <!--change to button if dropdown should be under "guides"-->
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="Characters.html">Characters</a>
+                                <a href="Weapons.html">Weapons</a>
+                                <a href="Artifacts.html">Artifacts</a>
+                            </div>
+                        </div>
+                        <a href="About.html">About</a>
+                        <a href="Contact.html">Contact</a>
+
+                        <!--searchbar changes start here-->
+
+                        <div class="search-container">
+                            <form autocomplete="off">
+                                <!--changes made to search bar!-->
+                                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                <button type="submit" onclick="filterFunction()"><i class="fa fa-search"></i></button>
+                            </form>
+
+                            <div class="dropdown">
+                                <div id="search-list" class="dropdown-content">
+                                    <!--navbar-->
+                                    <a href="About.html">About</a>
+                                    <a href="Characters.html">Characters</a>
+                                    <a href="Weapons.html">Weapons</a>
+                                    <a href="Contact.html">Contact</a>
+                                    <a href="Artifacts.html">Artifcats</a>
+                                    
+                                    <!--characters--> <!--change the html links on the character and weapon page-->
+                                    <a href="Eula.html">Eula</a>
+                                    <a href="Albedo.html">Albedo</a>
+                                    <a href="Alhaitham.html">Alhaitham</a>
+                                    <a href="Aloy.html">Aloy</a>
+                                    <a href="Amber.html">Amber</a>
+                                    <a href="Itto.html">Arataki Itto</a>
+                                    <a href="Baizhu.html">Baizhu</a>
+                                    <a href="Barbara.html">Barbara</a>
+                                    <a href="Beidou.html">Beidou</a>
+                                    <a href="Bennett.html">Bennett</a>
+
+
+                                    <!--weapons-->
+                                    <a href="SoBP.html">Song of Broken Pines</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="Search.js"></script> <!--transfer to near end of body-->
+
+                        <!--search bar ends here-->
+
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+            </div>
+            <script src="Slideshow.js"></script>  <!--transfer to near end of body-->
+
+            <!--changes end here-->
+            
+            <img src="content/Eula/misc/port.png" class="char-img">
+            <img src="content/region/mond.png" class="region-img">
+            <div class="content-body"> <!--div for start content--> <!--stuff is adjusted to comlab screen-->
+                <br><br>
+                <h1 class="content-header"><i>Eula Lawrence</i></h1>
+                <div><img class="visionweapon" src="content/Eula/misc/Element_Cryo.png"><img class="visionweapon"
+                        src="content/Eula/talents/UI_GachaTypeIcon_Claymore.png"><img class="rarity"
+                        src="content/sys/5star.png"></div> <!--vision,weapon and rarity icon-->
+                <p class="content-text"><br>Eula Lawrence is a playable Cryo character in Genshin Impact. <br><br>
+                    Although a descendant of the infamous and tyrannical Lawrence Clan, Eula severed her ties with the
+                    clan and became the captain
+                    of the Reconnaissance Company with the Knights of Favonius. <br></p>
+                <div class="toc-navbar" style="margin-top:10px;"><!--div for toc-->
+                    <a href="#talents">Talents</a>
+                    <a href="#passives">Passives</a>
+                    <a href="#constellations">Constellations</a>
+                    <a href="#artifacts">Artifacts</a>
+                    <a href="#weapons">Weapons</a>
+                    <a href="#teams">Teams</a>
+                    <a href="#summary">Summary</a>
+                </div>
+                <br><br>
+                <iframe class="char-video" src="https://www.youtube.com/embed/Go7SeJ-yOL4" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="ascension-container">
+                <label for="toggle-image" class="toggle-button">Show/Hide Ascension Farming Guide</label>
+                <input type="checkbox" id="toggle-image" style="display: none;">
+                <img id="hidden-image" src="Content/Eula/misc/ascension.png">
+            </div>
+            <br><br>
+            <div id="talents"><!--talents-->
+                <h1 class="sec-header">Talents</h1> <!--start of kit overview-->
+                <div class="talent-content">
+                    <div class="talent-gif-container">
+                        <img class="talent-gif" id="t1" src="Content/Eula/gif/1.gif">
+                    </div>
+                    <img class="talent-img" src="content/eula/talents/UI_GachaTypeIcon_Claymore.png">
+                    <div> <!--Normal attack-->
+                        <p class="talent-title">Favonius Bladework - Edel</p>
+                        <p class="talent-text"><b>Normal Attack</b><br>
+                            Perform up to five consecutive strikes.<br><br>
+                            <b>Charged Attack</b><br>
+                            Drains Stamina over time to perform continuous slashes.<br>At the end of the sequence,
+                            perform a
+                            more powerful slash.<br><br>
+                            <b>Plunging Attack</b><br>
+                            Plunges from mid-air to strike the ground, damaging<br>opponents along the path and dealing
+                            AoE
+                            DMG
+                            upon impact.
+                        </p>
+                    </div>
+                </div>
+                <br><br>
+                <div class="talent-content">
+                    <div class="talent-gif-container">
+                        <img class="talent-gif" id="t2" src="Content/Eula/gif/2.gif">
+                    </div>
+                    <img class="talent-img" src="content/eula/talents/talent_2.png">
+                    <div> <!--Elemental Skill-->
+                        <p class="talent-title">Icetide Vortex</p>
+                        <p class="talent-text"><b>Press</b><br>
+                            Slashes swiftly, dealing Cryo DMG. When it hits an opponent,<br>Eula gains a stack of
+                            Grimheart
+                            that stacks up to two times.<br><br>
+                            These stats can only be gained once every 0.3s.<br><br>
+                            <b><i>Grimheart Stack</i></b><br>
+                            Increases Eula's resistance to interruption and DEF.<br><br>
+                            <b>Hold</b><br>
+                            Wielding her sword, Eula consumes all the stacks of Grimheart<br>
+                            and lashes forward, dealing AoE Cryo DMG to opponents in front of her.<br>
+                            If Grimheart stacks are consumed, surrounding opponents will have their<br>
+                            Physical RES and Cryo RES decreased.<br><br>
+                            Each consumed stack of Grimheart will be converted into an Icewhirl Brand<br>
+                            that deals Cryo DMG to nearby opponents.<br>
+                        </p>
+                    </div>
+                </div>
+                <br><br>
+                <div class="talent-content">
+                    <div class="talent-gif-container">
+                        <img class="talent-gif" id="t3" src="Content/Eula/gif/3.gif">
+                    </div>
+                    <img class="talent-img" src="content/eula/talents/talent_3.png">
+                    <div> <!--Elemental Burst-->
+                        <p class="talent-title">Glacial Illumination</p>
+                        <p class="talent-text">
+                            Brandishes her greatsword, dealing Cryo DMG to nearby opponents<br>
+                            and creating a Lightfall Sword that follows her around for a duration<br>
+                            of up to 7s.While present, the Lightfall Sword increases Eula's resistance<br>
+                            to interruption.<br><br>
+                            When Eula's own Normal Attack, Elemental Skill, and Elemental Burst deal DMG<br>
+                            to opponents, they will charge the Lightfall Sword, which can gain an energy<br>
+                            stack once every 0.1s.<br><br>
+                            Once its duration ends, the Lightfall Sword will descend and explode violently,<br>
+                            dealing Physical DMG to nearby opponents. This DMG scales on the number<br>
+                            of energy stacks the Lightfall Sword has accumulated. If Eula leaves the<br>
+                            field, the Lightfall Sword will immediately explode.
+                        </p>
+                    </div>
+                </div>
+                </p>
+            </div>
+            <br><br><br>
+            <div id="passives"><!--passives-->
+                <h1 class="sec-header">Passives</h1> <!--start of passives-->
+                <div class="passive-content"><br><br>
+                    <div>
+                        <table class="GeneratedTable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="passive-img-container">
+                                            <img class="passive-img" src="content/eula/talents/talent_4.png">
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="passive-img-container">
+                                            <img class="passive-img" src="content/eula/talents/talent_5.png">
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="passive-img-container">
+                                            <img class="passive-img" src="content/eula/talents/talent_6.png">
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="passive-title">Roiling<br>Rime</td>
+                                    <td class="passive-title">Wellspring of<br>War-Lust</td>
+                                    <td class="passive-title">Aristocratic<br>Introspection</td>
+                                </tr>
+                                <tr>
+                                    <td class="passive-text">If 2 stacks of Grimheart<br>
+                                        are consumed upon unleashing<br>
+                                        the Holding Mode of Icetide Vortex,<br>
+                                        a Shattered Lightfall Sword will<br>
+                                        be created that will explode<br>
+                                        immediately,dealing 50% of the<br>
+                                        basic Physical DMG dealt by a<br>
+                                        Lightfall Sword created by<br>
+                                        Glacial Illumination.<br>
+                                    </td>
+                                    <td class="passive-text">When Glacial Illumination<br>
+                                        is cast the CD of Icetide<br>
+                                        Vortex is reset and <br>
+                                        Eula gains 1 stack of<br>
+                                        Grimheart.</td>
+                                    <td class="passive-text">When Eula crafts Character<br>
+                                        Talent Materials, she<br>
+                                        has a 10% chance to receive<br>
+                                        double the product.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div id="constellations"><!--Constellations-->
+                <h1 class="sec-header">Constellations</h1>
+                <div class="cons-content">
+                    <div class="constellation-container">
+                        <div class="cons-btn-containerl">
+                            <button class="cons-btn" onclick="showDescription('star1')">C1</button>
+                            <button class="cons-btn" onclick="showDescription('star2')">C2</button>
+                            <button class="cons-btn" onclick="showDescription('star3')">C3</button>
+                        </div>
+                        <div class="cons-btn-containerr">
+                            <button class="cons-btn" onclick="showDescription('star4')">C4</button>
+                            <button class="cons-btn" onclick="showDescription('star5')">C5</button>
+                            <button class="cons-btn" onclick="showDescription('star6')">C6</button>
+                        </div>
+                        <img class="cons-img" src="content/eula/misc/image.png" alt="Character Constellation"
+                            id="constellation-image">
+                        <div class="point" id="star1">
+                            <div class="description">
+                                <img class="cons-icon" src="content/eula/constellations/con1.png">
+                                <p class="cons-title">C1 - Tidal Illusion</p>
+                                <p class="cons-text">Every time Icetide Vortex's Grimheart stacks are consumed, Eula's
+                                    Physical DMG is increased by 30% for 6s.<br><br>
+                                    Each stack consumed will increase the duration of this effect by 6s up to a maximum
+                                    of 18s.</p>
+                            </div>
+                        </div>
+                        <div class="point" id="star2">
+                            <div class="description">
+                                <img class="cons-icon" src="content/eula/constellations/con2.png">
+                                <p class="cons-title">C2 - Lady of Seafoam</p>
+                                <p class="cons-text">Decreases the CD of Icetide Vortex's Holding Mode, rendering it
+                                    identical to Tapping CD.</p>
+                            </div>
+                        </div>
+                        <div class="point" id="star3">
+                            <div class="description">
+                                <img class="cons-icon" src="content/eula/constellations/con3.png">
+                                <p class="cons-title">C3 - Lawrence Pedigree</p>
+                                <p class="cons-text">Increases the Level of Glacial Illumination by 3.<br><br>
+                                    Maximum upgrade level is 15.</p>
+                            </div>
+                        </div>
+                        <div class="point" id="star4">
+                            <div class="description">
+                                <img class="cons-icon" src="content/eula/constellations/con4.png">
+                                <p class="cons-title">C4 - The Obstinacy of One's Inferiors</p>
+                                <p class="cons-text">Lightfall Swords deal 25% increased DMG against opponents with less
+                                    than 50% HP.</p>
+                            </div>
+                        </div>
+                        <div class="point" id="star5">
+                            <div class="description">
+                                <img class="cons-icon" src="content/eula/constellations/con5.png">
+                                <p class="cons-title">C5 - Chivalric Quality</p>
+                                <p class="cons-text">Increases the Level of Icetide Vortex by 3.<br><br>
+                                    Maximum upgrade level is 15.</p>
+                            </div>
+                        </div>
+                        <div class="point" id="star6">
+                            <div class="description">
+                                <img class="cons-icon" src="content/eula/constellations/con6.png">
+                                <p class="cons-title">C6 - Noble Obligation</p>
+                                <p class="cons-text">Lightfall Swords created by Glacial Illumination start with 5
+                                    stacks of energy. Normal Attacks, Elemental Skills, and Elemental Bursts have a 50%
+                                    chance to grant the Lightfall Sword an additional stack of energy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="artifacts"><!--Artifacts-->
+                <h1 class="sec-header">Artifacts</h1>
+                <div class="arts-content">
+                    <div class="stat-table" role="region" tabindex="0">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="arts-minorheader">Stats</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="arts-img-container">
+                                            <img class="arts-img" src="content/eula/artifacts/sands.png">
+                                        </div>
+                                        <div class="arts-title"><br>Timepiece<br></div>
+                                        <div class="arts-text">Atk%</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="arts-img-container">
+                                            <img class="arts-img" src="content/eula/artifacts/goblet.png">
+                                        </div>
+                                        <div class="arts-title"><br>Goblet<br></div>
+                                        <div class="arts-text">Physical DMG</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="arts-img-container">
+                                            <img class="arts-img" src="content/eula/artifacts/circlet.png">
+                                        </div>
+                                        <div class="arts-title"><br>Circlet<br></div>
+                                        <div class="arts-text">Crit Rate% or<br>Crit DMG%</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="set-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="set-title">4pc Pale Flame</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <img class="set-img" src="content/eula/artifacts/52.png"><img
+                                                class="set-img" src="content/eula/artifacts/42.png"><img class="set-img"
+                                                src="content/eula/artifacts/32.png"><img class="set-img"
+                                                src="content/eula/artifacts/22.png">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="set-text">2-PC: Physical DMG +25%<br>
+                                            4-PC: When an Elemental skill hits an opponent, ATK is increased by 9% for
+                                            7s. This effect stacks up to 2 times and can be triggered once every 0.3s.
+                                            Once 2 stacks are reached, 2-set effect is doubled.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="set-desc">
+                                            The Pale Flame set is an excellent match for Eula's emphasis on dealing
+                                            physical damage, as it substantially enhances both her normal attacks and
+                                            her Elemental Burst. This set alone can grant her a combined increase of 50%
+                                            in Physical DMG and an 18% boost to her ATK.</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br><br><br><br><br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="set-title">2pc Pale Flame ;<br>2pc Bloodstained Chivalry</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <img class="set-img" src="content/eula/artifacts/52.png"><img
+                                                class="set-img" src="content/eula/artifacts/42.png"><img class="set-img"
+                                                src="content/eula/artifacts/3.png"><img class="set-img"
+                                                src="content/eula/artifacts/2.png">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="set-text">2-PC: Physical DMG +25%<br>
+                                            2-PC: Physical DMG +25%</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="set-desc">
+                                            The 2-piece Pale Flame and 2-piece Bloodstained Chivalry combination offers
+                                            versatility and a more balanced approach to maximizing her damage. Compared
+                                            to her best set, this Main DPS build is only lacking an +18% ATK bonus.
+                                            Depending on your substats, this can outperform her best Artifact set.</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="weapons"><!--Weapons-->
+                <h1 class="sec-header">Weapons</h1>
+                <div><!--label side-->
+                    <img class="most-wep" src="content/sys/most.png"><img class="least-wep" src="content/sys/least.png">
+                </div>
+                <div class="wep-content">
+                    <div class="weapon-table" role="region" tabindex="0">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="table-mod"></th>
+                                    <th class="table-modalt"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="SoBP.html"><img class="wep-img" src="content/eula/weapons/song.png">
+                                    </td>
+                                    <td>
+                                        <div class="wep-name">Song of Broken Pines</div><br>
+                                        <div class="wep-text">Eula's signature weapon, offering high base ATK, Physical
+                                            DMG% substat, and ATK%. It's perfect for Eula and enhances her combos.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/wolf.png"></td>
+                                    <td>
+                                        <div class="wep-name">Wolf's Gravestone</div><br>
+                                        <div class="wep-text">A versatile weapon with a teamwide ATK% buff. While it can
+                                            outdamage Song of Broken Pines under certain conditions, it's harder to proc
+                                            its passive with Eula's Burst.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/unforged.png"></td>
+                                    <td>
+                                        <div class="wep-name">The Unforged</div><br>
+                                        <div class="wep-text">Similar to Wolf's Gravestone but weaker. It provides ATK
+                                            buffs and requires a shield for maximum power.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/pride.png"></td>
+                                    <td>
+                                        <div class="wep-name">Skyward Pride</div><br>
+                                        <div class="wep-text">Its power depends on your Energy Recharge needs. Eula can
+                                            utilize its passive well, but it's situational and may be outperformed by
+                                            some 4-star options.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/redhorn.png"></td>
+                                    <td>
+                                        <div class="wep-name">Redhorn Stonethresher</div><br>
+                                        <div class="wep-text">Offers high CRIT DMG% but suffers from poor base ATK and
+                                            passive. It's best when used with Bennett to overcome its limitations.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/serpent.png"></td>
+                                    <td>
+                                        <div class="wep-name">Serpent's Spine</div><br>
+                                        <div class="wep-text">A powerful weapon with high CRIT Rate substats and a
+                                            universal DMG% buff. </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/sealord.png"></td>
+                                    <td>
+                                        <div class="wep-name">Luxurious Sea-Lord</div><br>
+                                        <div class="wep-text">The best F2P option for Eula with a 24% DMG buff for her
+                                            Burst. It's cost-effective and highly recommended for F2P players.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/akou.png"></td>
+                                    <td>
+                                        <div class="wep-name">Akoumaru</div><br>
+                                        <div class="wep-text">An unstable weapon that's situational. It can be great
+                                            when used with Raiden and has high refinements, but it depends on Energy
+                                            cost in your team.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/snow.png"></td>
+                                    <td>
+                                        <div class="wep-name">Snow-Tombed Starsilver</div><br>
+                                        <div class="wep-text">A competitive F2P option, although not as favored as
+                                            Luxurious Sea-Lord. It's straightforward but has a slight inconsistency.
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/proto.png"></td>
+                                    <td>
+                                        <div class="wep-name">Prototype Archaic</div><br>
+                                        <div class="wep-text">Similar in power to Snow-Tombed Starsilver but offers
+                                            higher consistency.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="wep-img" src="content/eula/weapons/black.png"></td>
+                                    <td>
+                                        <div class="wep-name">Blackcliff Slasher</div><br>
+                                        <div class="wep-text">Powerful at 3 stacks but rare to achieve. Good at lower
+                                            stacks but not worth trading 25 Starglitters for.</div>
+                                    </td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="teams"><!--Teams-->
+                <h1 class="sec-header">Team Compositions</h1>
+                <div class="team-content">
+                    <img src="content/Eula/misc/port.png" class="char-img">
+                    <img src="content/eula/misc/Element_Cryo.png" class="team-vision">
+                    <div class="team-table" role="region" tabindex="0">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="pointtem">Superconduct Team<br>
+                                            <div class="description1">
+                                                <p class="cons-text">Superconduct stands out as a highly effective
+                                                    method to optimize Eula's Physical Damage, especially when
+                                                    considering her Cryo abilities. When teamed up with Electro
+                                                    characters who consistently inflict Electro status on enemies, every
+                                                    single one of Eula's attacks gets a significant boost in power.
+                                                    Example:</p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img class="plus" src="content/sys/plus.png"><img class="team-img"
+                                            src="content/eula/teams/t2.png"><img class="team-img"
+                                            src="content/eula/teams/t3.png"><img class="team-img"
+                                            src="content/eula/teams/t4.png"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br><br><br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="pointtem">Shatter Team<br>
+                                            <div class="description1">
+                                                <p class="cons-text">The team includes Eula as the primary damage
+                                                    dealer, Cryo support characters to apply Cryo status, physical
+                                                    support characters to enhance Eula's physical damage, energy
+                                                    recharge support for her Elemental Burst, and additional utility or
+                                                    crowd control characters as needed. The goal is to trigger shatter
+                                                    reactions by combining Cryo and physical damage for powerful burst
+                                                    combos. Example:</p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img class="plus" src="content/sys/plus.png"><img class="team-img"
+                                            src="content/eula/teams/t9.png"><img class="team-img"
+                                            src="content/eula/teams/t10.png"><img class="team-img"
+                                            src="content/eula/teams/t8.png"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br><br><br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="pointtem">F2P Team<br>
+                                            <div class="description1">
+                                                <p class="cons-text">Alternate team composition using free-to-play
+                                                    characters available!</p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img class="plus" src="content/sys/plus.png"><img class="team-img"
+                                            src="content/eula/teams/t5.png"><img class="team-img"
+                                            src="content/eula/teams/t10.png"><img class="team-img"
+                                            src="content/eula/teams/t6.png"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="summary"><!--Summary-->
+                <h1 class="sec-header">Summary</h1>
+                <div class="sum-content">
+                    <div class="sum-table" role="region" tabindex="0">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="sum-mod"></th>
+                                    <th class="sum-modalt"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img class="sum-img" src="logo.png"></td>
+                                    <td>
+                                        <div class="sum-name">Role</div><br>
+                                        <div class="sum-text">Eula is primarily a Physical Damage dealer, making her
+                                            suitable for the Main DPS role. Her damage output relies on her Normal
+                                            Attacks and Elemental Burst.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="sum-img" src="logo.png"></td>
+                                    <td>
+                                        <div class="sum-name">Weapon Choice</div><br>
+                                        <div class="sum-text">Opt for a claymore weapon that boosts Physical Damage or
+                                            Critical Rate, such as the "Serpent Spine" or "The Unforged." These weapons
+                                            enhance her damage potential. Her best in slot is her signature weapon,
+                                            "Song of Broken Pines"</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="sum-img" src="logo.png"></td>
+                                    <td>
+                                        <div class="sum-name">Artifact Sets</div><br>
+                                        <div class="sum-text">The best artifact set for Eula is the "Pale Flame" set,
+                                            which increases her Physical Damage and provides a bonus when using her
+                                            Elemental Burst. You can also consider the "Bloodstained Chivalry" set for
+                                            increased Physical Damage.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="sum-img" src="logo.png"></td>
+                                    <td>
+                                        <div class="sum-name">Main Stats</div><br>
+                                        <div class="sum-text">Prioritize artifacts with ATK% and Physical Damage Bonus
+                                            as the main stats. For the Sands, Goblet, and Circlet, aim for ATK% or Crit
+                                            DMG% as the main stats, depending on her substats.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="sum-img" src="logo.png"></td>
+                                    <td>
+                                        <div class="sum-name">Substats</div><br>
+                                        <div class="sum-text">Look for substats that boost Crit Rate, Crit Damage, ATK%,
+                                            and Energy Recharge. These stats will significantly improve Eula's damage
+                                            output.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="sum-img" src="logo.png"></td>
+                                    <td>
+                                        <div class="sum-name">Talents</div><br>
+                                        <div class="sum-text">Level up her Normal Attack (Favonius Bladework - Edel),
+                                            Elemental Burst (Glacial Illumination), and Elemental Skill (Icetide Vortex)
+                                            talents to maximize her damage potential.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="sum-img" src="logo.png"></td>
+                                    <td>
+                                        <div class="sum-name">Team Comps</div><br>
+                                        <div class="sum-text">Consider pairing Eula with characters who can apply Cryo
+                                            status effects to trigger Superconduct and reduce enemy Physical RES.
+                                            Characters like Qiqi, Diona, or Rosaria can be great support options.</div>
+                                    </td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Site footer -->
+
+        </div>
+    </div>
+    </div>
+    <a href="#" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </a>
+</body>
+
+</html>

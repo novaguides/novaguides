@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Song of Broken Pines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!--placeholder favicon-->
+    <link rel="stylesheet" href="StyleSheet.css"> <!--embedded style sheet-->
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="twah.js" defer></script>
+</head>
+
+<body class="defaultbg">
+    <div class="bg-opacity-long">
+        <div class="main-div"> <!--when calling class in stylesheet make sure to use full stop-->
+            
+             <!-- banner changes start here (need to copy past)-->
+           
+            <div class="banner-slideshow"> <!--div for header/banner-->
+                <div class="banner slideshow-fade">
+                    <img src="Banners/Banner1.jpg" class="banner-image">
+                </div>
+
+                <div class="banner slideshow-fade">
+                    <img src="Banners/Banner2.jpg" class="banner-image">
+                </div>
+                
+                <div class="banner-opacity">
+                    <div class="logo-header"> <!--div for name and logo-->
+                       <table>
+                        <tr>
+                           <td> <img src="logo.png" id="logo-image"></td>
+                            <td><h1 class="header-text">NOVA GUIDES</h1> <!--change font for this--></td>
+                        </tr>
+                       </table>
+                    </div>
+
+                    <div class="circle-container">
+                        <span class="slideshow-circle" onclick="currentSlide(1)"></span>
+                        <span class="slideshow-circle" onclick="currentSlide(2)"></span>
+                    </div>
+
+                    <div class="navbar"><!--div for nav bar-->
+                        <a href="Home.html">Home</a>
+                        <div class="dropdown">
+                            <a class="dropbtn">Guides <!--change to button if dropdown should be under "guides"-->
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="Characters.html">Characters</a>
+                                <a href="Weapons.html">Weapons</a>
+                                <a href="Artifacts.html">Artifacts</a>
+                            </div>
+                        </div>
+                        <a href="About.html">About</a>
+                        <a href="Contact.html">Contact</a>
+
+                        <!--searchbar changes start here-->
+
+                        <div class="search-container">
+                            <form autocomplete="off">
+                                <!--changes made to search bar!-->
+                                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                <button type="submit" onclick="filterFunction()"><i class="fa fa-search"></i></button>
+                            </form>
+
+                            <div class="dropdown">
+                                <div id="search-list" class="dropdown-content">
+                                    <!--navbar-->
+                                    <a href="About.html">About</a>
+                                    <a href="Characters.html">Characters</a>
+                                    <a href="Weapons.html">Weapons</a>
+                                    <a href="Contact.html">Contact</a>
+                                    <a href="Artifacts.html">Artifcats</a>
+                                    
+                                    <!--characters--> <!--change the html links on the character and weapon page-->
+                                    <a href="Eula.html">Eula</a>
+                                    <a href="Albedo.html">Albedo</a>
+                                    <a href="Alhaitham.html">Alhaitham</a>
+                                    <a href="Aloy.html">Aloy</a>
+                                    <a href="Amber.html">Amber</a>
+                                    <a href="Itto.html">Arataki Itto</a>
+                                    <a href="Baizhu.html">Baizhu</a>
+                                    <a href="Barbara.html">Barbara</a>
+                                    <a href="Beidou.html">Beidou</a>
+                                    <a href="Bennett.html">Bennett</a>
+
+
+                                    <!--weapons-->
+                                    <a href="SoBP.html">Song of Broken Pines</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="Search.js"></script> <!--transfer to near end of body-->
+
+                        <!--search bar ends here-->
+
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+            </div>
+
+            <script src="Slideshow.js"></script>  <!--transfer to near end of body-->
+
+            <!--changes end here-->
+            
+            <img src="content/Song of Broken Pines/wish.png" class="char-img">
+            <img src="content/region/mond.png" class="region-img">
+            <div class="content-body"> <!--div for start content--> <!--stuff is adjusted to comlab screen-->
+                <br><br>
+                <h1 class="content-header"><i>Song of Broken Pines</i></h1>
+                <div><img class="visionweapon"
+                    src="content/Eula/talents/UI_GachaTypeIcon_Claymore.png"><img class="rarity" src="content/sys/5star.png"></div> <!--vision,weapon and rarity icon-->
+                <p class="content-text"><br>Song of Broken Pines is a 5-Star claymore obtainable from Weapon Event Wishes.<br><br>
+                    A greatsword as light as the sigh of grass in the breeze, yet as merciless to the corrupt as a typhoon.<br></p><br>
+                    <div><!--Reginements-->
+                    <input type="checkbox" id="r1-toggle" class="toggle-checkbox">
+                    <label for="r1-toggle" class="toggle-label">R1</label>
+                    <div class="toggle-content">
+                        <p><b>Rebel's Banner-Hymn</b><br><br>
+                            A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by <b>16%</b>,<br> 
+                            and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers.<br>
+                            This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers,<br>
+                            all of them will be consumed and all nearby party members will obtain the <br>
+                            "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn"<br>
+                            increases Normal ATK SPD by <b>12%</b> and increases ATK by <b>20%</b>. Once this effect is triggered,<br>
+                            you will not gain Sigils of Whispers for 20s. Of the many effects of the<br>
+                            "Millennial Movement", buffs of the same type will not stack.</p>
+                    </div>
+                    <input type="checkbox" id="r2-toggle" class="toggle-checkbox">
+                    <label for="r2-toggle" class="toggle-label">R2</label>
+                    <div class="toggle-content">
+                        <p><b>Rebel's Banner-Hymn</b><br><br>
+                            A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by <b>20%</b>,<br> 
+                            and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers.<br>
+                            This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers,<br>
+                            all of them will be consumed and all nearby party members will obtain the <br>
+                            "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn"<br>
+                            increases Normal ATK SPD by <b>15%</b> and increases ATK by <b>25%</b>. Once this effect is triggered,<br>
+                            you will not gain Sigils of Whispers for 20s. Of the many effects of the<br>
+                            "Millennial Movement", buffs of the same type will not stack.</p>
+                    </div>
+                    <input type="checkbox" id="r3-toggle" class="toggle-checkbox">
+                    <label for="r3-toggle" class="toggle-label">R3</label>
+                    <div class="toggle-content">
+                        <p><b>Rebel's Banner-Hymn</b><br><br>
+                            A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by <b>24%</b>,<br> 
+                            and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers.<br>
+                            This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers,<br>
+                            all of them will be consumed and all nearby party members will obtain the <br>
+                            "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn"<br>
+                            increases Normal ATK SPD by <b>18%</b> and increases ATK by <b>30%</b>. Once this effect is triggered,<br>
+                            you will not gain Sigils of Whispers for 20s. Of the many effects of the<br>
+                            "Millennial Movement", buffs of the same type will not stack.</p>
+                    </div>
+                    <input type="checkbox" id="r4-toggle" class="toggle-checkbox">
+                    <label for="r4-toggle" class="toggle-label">R4</label>
+                    <div class="toggle-content">
+                        <p><b>Rebel's Banner-Hymn</b><br><br>
+                            A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by <b>28%</b>,<br> 
+                            and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers.<br>
+                            This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers,<br>
+                            all of them will be consumed and all nearby party members will obtain the <br>
+                            "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn"<br>
+                            increases Normal ATK SPD by <b>21%</b> and increases ATK by <b>35%</b>. Once this effect is triggered,<br>
+                            you will not gain Sigils of Whispers for 20s. Of the many effects of the<br>
+                            "Millennial Movement", buffs of the same type will not stack.</p>
+                    </div>
+                    <input type="checkbox" id="r5-toggle" class="toggle-checkbox">
+                    <label for="r5-toggle" class="toggle-label">R5</label>
+                    <div class="toggle-content">
+                        <p><b>Rebel's Banner-Hymn</b><br><br>
+                            A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by <b>32%</b>,<br> 
+                            and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers.<br>
+                            This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers,<br>
+                            all of them will be consumed and all nearby party members will obtain the <br>
+                            "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn"<br>
+                            increases Normal ATK SPD by <b>24%</b> and increases ATK by <b>40%</b>. Once this effect is triggered,<br>
+                            you will not gain Sigils of Whispers for 20s. Of the many effects of the<br>
+                            "Millennial Movement", buffs of the same type will not stack.</p>
+                    </div>
+                    </div>
+                <div class="wep-front">
+                    <p><b>Base Atk</b>: 49<br><br><b>Bonus Stat</b>: Physical DMG + 4.5%</p>
+                </div>
+                <div class="ascension-container">
+                    <label for="toggle-image" class="toggle-button">Show/Hide Ascension Farming Guide</label>
+                    <input type="checkbox" id="toggle-image" style="display: none;">
+                    <img id="hidden-image" src="Content/Song of Broken Pines/ascension.png">
+                </div>
+                </div>
+                <br><br><br><br><br><br>
+                <div id="teams"><!--Teams-->
+                    <h1 class="sec-header">Recommended Characters</h1>
+                    <br><br>
+                    <p class="cons-text">It's good for characters who benefit from its stats and substat.<br>The weapon's main attributes are high base ATK, a Physical DMG% substat, and an ATK% substat.<br>Here are some characters who can make good use of this weapon:</p>
+                    <div class="weapon-rec">
+                    <a href="Eula.html"><img class="wep-team-img" src="content/eula/teams/t1.png"></a><img class="wep-team-img" src="content/Song of Broken Pines/r1.png"><img class="wep-team-img" src="content/Song of Broken Pines/r2.png">
+                    </div>
+            </div>    
+    </div>
+    </div>
+</div>
+</body>
+
+</html>

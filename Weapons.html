@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Weapons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!--placeholder favicon-->
+  <link rel="stylesheet" href="StyleSheet.css"> <!--embedded style sheet-->
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet">
+  <script src="twah.js" defer></script>
+</head>
+
+<body class="defaultbg">
+  <div class="bg-opacity-long">
+    <div class="main-div"> <!--when calling class in stylesheet make sure to use full stop-->
+      
+            <!-- banner changes start here (need to copy past)-->
+           
+            <div class="banner-slideshow"> <!--div for header/banner-->
+              <div class="banner slideshow-fade">
+                  <img src="Banners/Banner1.jpg" class="banner-image">
+              </div>
+
+              <div class="banner slideshow-fade">
+                  <img src="Banners/Banner2.jpg" class="banner-image">
+              </div>
+              
+              <div class="banner-opacity">
+                  <div class="logo-header"> <!--div for name and logo-->
+                     <table>
+                      <tr>
+                         <td> <img src="logo.png" id="logo-image"></td>
+                          <td><h1 class="header-text">NOVA GUIDES</h1> <!--change font for this--></td>
+                      </tr>
+                     </table>
+                  </div>
+
+                  <div class="circle-container">
+                      <span class="slideshow-circle" onclick="currentSlide(1)"></span>
+                      <span class="slideshow-circle" onclick="currentSlide(2)"></span>
+                  </div>
+
+                  <div class="navbar"><!--div for nav bar-->
+                      <a href="Home.html">Home</a>
+                      <div class="dropdown">
+                          <a class="dropbtn">Guides <!--change to button if dropdown should be under "guides"-->
+                              <i class="fa fa-caret-down"></i>
+                          </a>
+                          <div class="dropdown-content">
+                              <a href="Characters.html">Characters</a>
+                              <a href="Weapons.html">Weapons</a>
+                              <a href="Artifacts.html">Artifacts</a>
+                          </div>
+                      </div>
+                      <a href="About.html">About</a>
+                      <a href="Contact.html">Contact</a>
+
+                      <!--searchbar changes start here-->
+
+                      <div class="search-container">
+                          <form autocomplete="off">
+                              <!--changes made to search bar!-->
+                              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                              <button type="submit" onclick="filterFunction()"><i class="fa fa-search"></i></button>
+                          </form>
+
+                          <div class="dropdown">
+                              <div id="search-list" class="dropdown-content">
+                                  <!--navbar-->
+                                  <a href="About.html">About</a>
+                                  <a href="Characters.html">Characters</a>
+                                  <a href="Weapons.html">Weapons</a>
+                                  <a href="Contact.html">Contact</a>
+                                  <a href="Artifacts.html">Artifcats</a>
+                                  
+                                  <!--characters--> <!--change the html links on the character and weapon page-->
+                                  <a href="Eula.html">Eula</a>
+                                  <a href="Albedo.html">Albedo</a>
+                                  <a href="Alhaitham.html">Alhaitham</a>
+                                  <a href="Aloy.html">Aloy</a>
+                                  <a href="Amber.html">Amber</a>
+                                  <a href="Itto.html">Arataki Itto</a>
+                                  <a href="Baizhu.html">Baizhu</a>
+                                  <a href="Barbara.html">Barbara</a>
+                                  <a href="Beidou.html">Beidou</a>
+                                  <a href="Bennett.html">Bennett</a>
+
+
+                                  <!--weapons-->
+                                  <a href="SoBP.html">Song of Broken Pines</a>
+                              </div>
+                          </div>
+                      </div>
+
+                      <script src="Search.js"></script> <!--transfer to near end of body-->
+
+                      <!--search bar ends here-->
+
+                  </div>
+
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              </div>
+          </div>
+
+          <script src="Slideshow.js"></script>  <!--transfer to near end of body-->
+
+          <!--changes end here-->
+          
+      <div class="content-body"> <!--div for content--> <!--stuff is adjusted to comlab screen-->
+        <div id="weapon-directory">
+          <h1 class="content-header">Weapons</h1>
+
+          <div class="filter-buttons2">
+            <button onclick="showAllWeapons()">Show All </button>
+            <img title="Sword" src="content/sys/Icon_Sword.webp" onclick="filterCharactersByWeaponType('sword')" />
+            <img title="Polearm" src="content/sys/Icon_Polearm.webp" onclick="filterCharactersByWeaponType('pole')" />
+            <img title="Catalyst" src="content/sys/Icon_Catalyst.webp" onclick="filterCharactersByWeaponType('book')" />
+            <img title="Claymore" src="content/sys/Icon_Claymore.webp"
+              onclick="filterCharactersByWeaponType('claymore')" />
+            <img title="Bow" src="content/sys/Icon_Bow.webp" onclick="filterCharactersByWeaponType('bow')" />
+          </div>
+
+          <div id="scroll"> <!--made a separate div to make the child div scrollable-->
+            <div class="weapon-list"> <!--still need to revise css for this-->
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/A_Thousand_Floating_Dreams.png"
+                  alt="A Thousand Floating Dreams">
+                <h2 class="weapon-name">A Thousand <br>Floating Dreams</h2>
+
+                <div class="sideprev">
+                  <img alt="A Thousand Floating Dreams" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Akuoumaru.png"
+                  alt="Akuoumaru">
+                <h2 class="weapon-name">Akuoumaru</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Alley_Hunter.png"
+                  alt="Alley Hunter">
+                <h2 class="weapon-name">Alley Hunter</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Amenoma_Kageuchi.png"
+                  alt="Amenoma Kageuchi">
+                <h2 class="weapon-name">Amenoma Kageuchi</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Amos'_Bow.png"
+                  alt="Amos' Bow">
+                <h2 class="weapon-name">Amos' Bow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Aqua_Simulacra.png"
+                  alt="Aqua Simulacra">
+                <h2 class="weapon-name">Aqua Simulacra</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <div class="break"></div>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Aquila_Favonia.png"
+                  alt="Aquila Favonia">
+                <h2 class="weapon-name">Aquila <br> Favonia</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Ballad_of_the_Fjords.png"
+                  alt="Ballad of the Fjords">
+                <h2 class="weapon-name">Ballad of <br> the Fjords</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Beacon_of_the_Reed_Sea.png" alt="Beacon of the Reed Sea">
+                <h2 class="weapon-name">Beacon of <br> the Reed Sea</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Black_Tassel.png"
+                  alt="Black Tassel">
+                <h2 class="weapon-name">Black Tassel</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Blackcliff_Agate.png"
+                  alt="Blackcliff Agate">
+                <h2 class="weapon-name">Blackcliff <br> Agate</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Blackcliff_Longsword.png"
+                  alt="Blackcliff Longsword">
+                <h2 class="weapon-name">Blackcliff <br> Longsword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <div class="break"></div>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Blackcliff_Pole.png"
+                  alt="Blackcliff Pole">
+                <h2 class="weapon-name">Blackcliff <br> Pole</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Blackcliff_Slasher.png"
+                  alt="Blackcliff Slasher">
+                <h2 class="weapon-name">Blackcliff <br> Slasher</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Blackcliff_Warbow.png"
+                  alt="Blackcliff Warbow">
+                <h2 class="weapon-name">Blackcliff <br> Warbow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Bloodtainted_Greatsword.png" alt="Bloodtainted Greatsword">
+                <h2 class="weapon-name">Bloodtainted <br> Greatsword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Calamity_Queller.png"
+                  alt="Calamity Queller">
+                <h2 class="weapon-name">Calamity <br> Queller</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Cinnabar_Spindle.png"
+                  alt="Cinnabar Spindle">
+                <h2 class="weapon-name">Cinnabar <br> Spindle</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Compound_Bow.png"
+                  alt="Compound Bow">
+                <h2 class="weapon-name">Compound <br> Bow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Cool_Steel.png"
+                  alt="Cool Steel">
+                <h2 class="weapon-name">Cool <br> Steel</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Crescent_Pike.png"
+                  alt="Crescent Pike">
+                <h2 class="weapon-name">Crescent <br> Pike</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Dark_Iron_Sword.png"
+                  alt="Dark Iron Sword">
+                <h2 class="weapon-name">Dark Iron <br>Sword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Deathmatch.png"
+                  alt="Deathmatch">
+                <h2 class="weapon-name">Deathmatch</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Debate_Club.png"
+                  alt="Debate Club">
+                <h2 class="weapon-name">Debate Club</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <div class="break"></div>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Dodoco_Tales.png"
+                  alt="Dodoco Tales">
+                <h2 class="weapon-name">Dodoco <br> Tales</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Dragon's_Bane.png"
+                  alt="Dragon's Bane">
+                <h2 class="weapon-name">Dragon's <br> Bane</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Dragonspine_Spear.png"
+                  alt="Dragonspine Spear">
+                <h2 class="weapon-name">Dragonspine <br> Spear</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Elegy_for_the_End.png"
+                  alt="Elegy for the End">
+                <h2 class="weapon-name">Elegy for<br> the End</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Emerald_Orb.png"
+                  alt="Emerald Orb">
+                <h2 class="weapon-name">Emerald <br> Orb</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/End_of_the_Line.png"
+                  alt="End of the Line">
+                <h2 class="weapon-name">End of <br>the Line</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Engulfing_Lightning.png"
+                  alt="Engulfing Lightning">
+                <h2 class="weapon-name">Engulfing <br>Lightning</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Everlasting_Moonglow.png"
+                  alt="Everlasting Moonglow">
+                <h2 class="weapon-name">Everlasting <br>Moonglow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Eye_of_Perception.png"
+                  alt="Eye of Perception">
+                <h2 class="weapon-name">Eye of <br>Perception</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Fading_Twilight.png"
+                  alt="Fading Twilight">
+                <h2 class="weapon-name">Fading<br> Twilight</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Favonius_Codex.png"
+                  alt="Favonius Codex">
+                <h2 class="weapon-name">Favonius Codex</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Favonius_Greatsword.png"
+                  alt="Favonius Greatsword">
+                <h2 class="weapon-name">Favonius <br>Greatsword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Favonius_Lance.png"
+                  alt="Favonius Lance">
+                <h2 class="weapon-name">Favonius<br> Lance</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Favonius_Sword.png"
+                  alt="Favonius Sword">
+                <h2 class="weapon-name">Favonius <br>Sword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Favonius_Warbow.png"
+                  alt="Favonius Warbow">
+                <h2 class="weapon-name">Favonius<br> Warbow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Ferrous_Shadow.png"
+                  alt="Ferrous Shadow">
+                <h2 class="weapon-name">Ferrous <br> Shadow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Festering_Desire.png"
+                  alt="Festering Desire">
+                <h2 class="weapon-name">Festering <br>Desire</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Fillet_Blade.png"
+                  alt="Fillet Blade">
+                <h2 class="weapon-name">Fillet <br> Blade</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Finale_of_the_Deep.png"
+                  alt="Finale of the Deep">
+                <h2 class="weapon-name">Finale of<br> the Deep</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Fleuve_Cendre_Ferryman.png" alt="Fleuve Cendre Ferryman">
+                <h2 class="weapon-name">Fleuve Cendre<br>Ferryman</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Flowing_Purity.png"
+                  alt="Flowing Purity">
+                <h2 class="weapon-name">Flowing Purity</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Forest_Regalia.png"
+                  alt="Forest Regalia">
+                <h2 class="weapon-name">Forest <br>Regalia</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Freedom-Sworn.png"
+                  alt="Freedom-Sworn">
+                <h2 class="weapon-name">Freedom-Sworn</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Frostbearer.png"
+                  alt="Frostbearer">
+                <h2 class="weapon-name">Frostbearer</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <div class="break"></div>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Fruit_of_Fulfillment.png"
+                  alt="Fruit of Fulfillment">
+                <h2 class="weapon-name">Fruit of Fulfillment</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Hakushin_Ring.png"
+                  alt="Hakushin Ring">
+                <h2 class="weapon-name">Hakushin<br>Ring</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Halberd.png"
+                  alt="Halberd">
+                <h2 class="weapon-name">Halberd</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Hamayumi.png"
+                  alt="Hamayumi">
+                <h2 class="weapon-name">Hamayumi</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Haran_Geppaku_Futsu.png"
+                  alt="Haran Geppaku Futsu">
+                <h2 class="weapon-name">Haran <br>Geppaku <br>Futsu</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Harbinger_of_Dawn.png"
+                  alt="Harbinger of Dawn">
+                <h2 class="weapon-name">Harbinger <br> of Dawn</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Hunter's_Path.png"
+                  alt="Hunter's Path">
+                <h2 class="weapon-name">Crescent <br> Pike</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Iron_Sting.png"
+                  alt="Iron Sting">
+                <h2 class="weapon-name">Iron<br>Sting</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Jadefall's_Splendor.png"
+                  alt="Jadefall's Splendor">
+                <h2 class="weapon-name">Jadefall's<br>Splendor</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Kagotsurube_Isshin.png"
+                  alt="Kagotsurube Isshin">
+                <h2 class="weapon-name">Kagotsurube<br>Isshin</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Kagura's_Verity.png"
+                  alt="Kagura's Verity">
+                <h2 class="weapon-name">Kagura's<br>Verity</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Katsuragikiri_Nagamasa.png" alt="Katsuragikiri Nagamasa">
+                <h2 class="weapon-name">Katsuragikiri<br>Nagamasa</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Key_of_Khaj-Nisut.png"
+                  alt="Key of Khaj-Nisut">
+                <h2 class="weapon-name">Key of<br>Khaj-Nisut</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/King's_Squire.png"
+                  alt="King's Squire">
+                <h2 class="weapon-name">King's<br>Squire</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Kitain_Cross_Spear.png"
+                  alt="Kitain Cross Spear">
+                <h2 class="weapon-name">Kitain <br>Cross Spear</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Light_of_Foliar_Incision.png"
+                  alt="Light of Foliar Incision">
+                <h2 class="weapon-name">Light of<br>Foliar<br>Incision</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Lion's_Roar.png"
+                  alt="Lion's Roar">
+                <h2 class="weapon-name">Lion's Roar</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Lithic_Blade.png"
+                  alt="Lithic Blade">
+                <h2 class="weapon-name">Lithic<br>Blade</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Lithic_Spear.png"
+                  alt="Lithic Spear">
+                <h2 class="weapon-name">Lithic<br>Spear</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Lost_Prayer_to_the_Sacred_Winds.png"
+                  alt="Lost Prayer to the Sacred Winds">
+                <h2 class="weapon-name">Lost Prayer to<br> the Sacred Winds</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Luxurious_Sea-Lord.png"
+                  alt="Luxurious Sea-Lord">
+                <h2 class="weapon-name">Luxurious<br>Sea-Lord</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Magic_Guide.png"
+                  alt="Magic Guide">
+                <h2 class="weapon-name">Magic<br>Guide</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Mailed_Flower.png"
+                  alt="Mailed Flower">
+                <h2 class="weapon-name">Mailed<br>Flower</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Makhaira_Aquamarine.png"
+                  alt="Makhaira Aquamarine">
+                <h2 class="weapon-name">Makhaira<br>Aquamarine</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Mappa_Mare.png"
+                  alt="Mappa Mare">
+                <h2 class="weapon-name">Mappa <br> Mare</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Memory_of_Dust.png"
+                  alt="Memory of Dust">
+                <h2 class="weapon-name">Memory <br>of Dust</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Messenger.png"
+                  alt="Messenger">
+                <h2 class="weapon-name">Messenger</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Missive_Windspear.png"
+                  alt="Missive Windspear">
+                <h2 class="weapon-name">Missive <br>Windspear</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Mistsplitter_Reforged.png" alt="Mistsplitter Reforged">
+                <h2 class="weapon-name">Mistsplitter<br>Reforged</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Mitternachts_Waltz.png"
+                  alt="Mitternachts Waltz">
+                <h2 class="weapon-name">Mitternachts <br> Waltz</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <div class="break"></div>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Moonpiercer.png"
+                  alt="Moonpiercer">
+                <h2 class="weapon-name">Moonpiercer</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Mouun's_Moon.png"
+                  alt="Mouun's Moon">
+                <h2 class="weapon-name">Mouun's <br>Moon</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Oathsworn_Eye.png"
+                  alt="Oathsworn Eye">
+                <h2 class="weapon-name">Oathsworn <br>Eye</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Otherworldly_Story.png"
+                  alt="Otherworldly Story">
+                <h2 class="weapon-name">Otherworldly <br>Story</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Polar_Star.png"
+                  alt="Polar Star">
+                <h2 class="weapon-name">Polar<br>Star</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Predator.png"
+                  alt="Predator">
+                <h2 class="weapon-name">Predator</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Primordial_Jade_Cutter.png" alt="Primordial Jade Cutter">
+                <h2 class="weapon-name">Primordial <br>Jade Cutter</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Primordial_Jade_Winged-Spear.png"
+                  alt="Primordial Jade Winged-Spear">
+                <h2 class="weapon-name">Primordial Jade<br>Winged-Spear</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Prototype_Amber.png"
+                  alt="Prototype Amber">
+                <h2 class="weapon-name">Prototype<br>Amber</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Prototype_Archaic.png"
+                  alt="Prototype Archaic">
+                <h2 class="weapon-name">Prototype<br>Archaic</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Prototype_Crescent.png"
+                  alt="Prototype Crescent">
+                <h2 class="weapon-name">Prototype <br>Crescent</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Prototype_Rancour.png"
+                  alt="Prototype Rancour">
+                <h2 class="weapon-name">Prototype <br>Rancour</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Prototype_Starglitter.png" alt="Prototype Starglitter">
+                <h2 class="weapon-name">Prototype<br>Starglitter</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Rainslasher.png"
+                  alt="Rainslasher">
+                <h2 class="weapon-name">Rainslasher</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Raven_Bow.png"
+                  alt="Raven Bow">
+                <h2 class="weapon-name">Raven Bow"</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Recurve_Bow.png"
+                  alt="Recurve Bow">
+                <h2 class="weapon-name">Recurve Bow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Redhorn_Stonethresher.png" alt="Redhorn Stonethresher">
+                <h2 class="weapon-name">Redhorn<br>Stonethresher</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Rightful_Reward.png"
+                  alt="Rightful Reward">
+                <h2 class="weapon-name">Rightful<br>Reward</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Royal_Bow.png"
+                  alt="Royal Bow">
+                <h2 class="weapon-name">Royal Bow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Royal_Greatsword.png"
+                  alt="Royal Greatsword">
+                <h2 class="weapon-name">Royal <br>Greatsword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Royal_Grimoire.png"
+                  alt="Royal GrimoireRoyal Grimoire">
+                <h2 class="weapon-name">Royal <br>Grimoire</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Royal_Longsword.png"
+                  alt="Royal Longsword">
+                <h2 class="weapon-name">Royal<br>Longsword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Royal_Spear.png"
+                  alt="Royal Spear">
+                <h2 class="weapon-name">Royal <br>Spear</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Rust.png" alt="Rust">
+                <h2 class="weapon-name">Rust</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <div class="break"></div>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Sacrificial_Bow.png"
+                  alt="Sacrificial Bow">
+                <h2 class="weapon-name">Sacrificial <br>Bow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Sacrificial_Fragments.png" alt="Sacrificial Fragments">
+                <h2 class="weapon-name">Sacrificial<br>Fragments</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Sacrificial_Greatsword.png" alt="Sacrificial Greatsword">
+                <h2 class="weapon-name">Sacrificial<br>Greatsword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Sacrificial_Jade.png"
+                  alt="Sacrificial Jade">
+                <h2 class="weapon-name">Sacrificial<br>Jade</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Sacrificial_Sword.png"
+                  alt="Sacrificial Sword">
+                <h2 class="weapon-name">Sacrificial<br> Sword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Sapwood_Blade.png"
+                  alt="Sapwood Blade">
+                <h2 class="weapon-name">Sapwood <br>Blade</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Scion_of_the_Blazing_Sun.png"
+                  alt="Scion of the Blazing Sun">
+                <h2 class="weapon-name">Scion of the <br>Blazing Sun</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Serpent_Spine.png"
+                  alt="Serpent Spine">
+                <h2 class="weapon-name">Serpent <br>Spine</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Sharpshooter's_Oath.png"
+                  alt="Sharpshooter's Oath">
+                <h2 class="weapon-name">Sharpshooter's <br>Oath</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Skyrider_Greatsword.png"
+                  alt="Skyrider Greatsword">
+                <h2 class="weapon-name">Skyrider<br>Greatsword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Skyrider_Sword.png"
+                  alt="Skyrider Sword">
+                <h2 class="weapon-name">Skyrider<br>Sword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Skyward_Atlas.png"
+                  alt="Skyward Atlas">
+                <h2 class="weapon-name">Skyward<br>Atlas</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Skyward_Blade.png"
+                  alt="Skyward Blade">
+                <h2 class="weapon-name">Skyward<br>Blade</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Skyward_Harp.png"
+                  alt="Skyward Harp">
+                <h2 class="weapon-name">Skyward<br>Harp</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Skyward_Pride.png"
+                  alt="Skyward Pride">
+                <h2 class="weapon-name">Skyward<br>Pride</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Skyward_Spine.png"
+                  alt="Skyward Spine">
+                <h2 class="weapon-name">Skyward<br>Spine</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Slingshot.png"
+                  alt="Slingshot">
+                <h2 class="weapon-name">Slingshot</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Snow-Tombed_Starsilver.png" alt="Snow-Tombed Starsilver">
+                <h2 class="weapon-name">Snow-Tombed <br>Starsilver</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Solar_Pearl.png"
+                  alt="Solar Pearl">
+                <h2 class="weapon-name">Solar <br>Pearl</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="SoBP.html">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Song_of_Broken_Pines.png"
+                  alt="Song of Broken Pines">
+                <h2 class="weapon-name">Song of <br>Broken Pines</h2>
+
+                <div class="sideprev">
+                  <img alt="Song of Broken Pines" class="previewimg" src="SoBP_Img.webp">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Song_of_Stillness.png"
+                  alt="Song of Stillness">
+                <h2 class="weapon-name">Song of <br>Stillness</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Staff_of_Homa.png"
+                  alt="Staff of Homa">
+                <h2 class="weapon-name">Staff <br>of Homa</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Staff_of_the_Scarlet_Sands.png"
+                  alt="Staff of the Scarlet Sands">
+                <h2 class="weapon-name">Staff of <br>the Scarlet <br>Sands</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Summit_Shaper.png"
+                  alt="Summit Shaper">
+                <h2 class="weapon-name">Summit <br>Shaper</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Sword_of_Descension.png"
+                  alt="Sword of Descension">
+                <h2 class="weapon-name">Sword of<br> Descension</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Talking_Stick.png"
+                  alt="Talking Stick">
+                <h2 class="weapon-name">Talking <br>Stick</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/The_Alley_Flash.png"
+                  alt="The Alley Flash">
+                <h2 class="weapon-name">The Alley <br>Flash</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/The_Bell.png"
+                  alt="The Bell">
+                <h2 class="weapon-name">The Bell</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/The_Black_Sword.png"
+                  alt="The Black Sword">
+                <h2 class="weapon-name">The Black<br>Sword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/The_Catch.png"
+                  alt="The Catch">
+                <h2 class="weapon-name">The Catch</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/The_First_Great_Magic.png" alt="The First Great Magic">
+                <h2 class="weapon-name">The First <br>Great Magic</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/The_Flute.png"
+                  alt="The Flute">
+                <h2 class="weapon-name">The <br>Flute"</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/The_Stringless.png"
+                  alt="The Stringless">
+                <h2 class="weapon-name">The Stringless</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/The_Unforged.png"
+                  alt="The Unforged">
+                <h2 class="weapon-name">The Unforged</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/The_Viridescent_Hunt.png"
+                  alt="The Viridescent Hunt">
+                <h2 class="weapon-name">The Viridescent Hunt</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/The_Widsith.png"
+                  alt="The Widsith">
+                <h2 class="weapon-name">The Widsith</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Thrilling_Tales_of_Dragon_Slayers.png"
+                  alt="Thrilling Tales of Dragon Slayers">
+                <h2 class="weapon-name">Thrilling Tales<br> of Dragon <br>Slayers</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Thundering_Pulse.png"
+                  alt="Thundering Pulse">
+                <h2 class="weapon-name">Thundering<br> Pulse</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Tidal_Shadow.png"
+                  alt="Tidal Shadow">
+                <h2 class="weapon-name">Tidal Shadow</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Toukabou_Shigure.png"
+                  alt="Toukabou Shigure">
+                <h2 class="weapon-name">Toukabou <br>Shigure</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Traveler's_Handy_Sword.png" alt="Traveler's Handy Sword">
+                <h2 class="weapon-name">Traveler's <br>Handy Sword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/Tulaytullah's_Remembrance.png"
+                  alt="Tulaytullah's Remembrance">
+                <h2 class="weapon-name">Tulaytullah's<br> Remembrance</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <div class="break"></div>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/Twin_Nephrite.png"
+                  alt="Twin Nephrite">
+                <h2 class="weapon-name">Twin <br> Nephrite</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Vortex_Vanquisher.png"
+                  alt="Vortex Vanquisher">
+                <h2 class="weapon-name">Vortex <br>Vanquisher</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Wandering_Evenstar.png"
+                  alt="Wandering Evenstar">
+                <h2 class="weapon-name">Wandering <br>Evenstar</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Wavebreaker's_Fin.png"
+                  alt="Wavebreaker's Fin">
+                <h2 class="weapon-name">Wavebreaker's Fin</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3"
+                  src="https://rerollcdn.com/GENSHIN/Weapons/White_Iron_Greatsword.png" alt="White Iron Greatsword">
+                <h2 class="weapon-name">White Iron <br> Greatsword</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="pole" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity3" src="https://rerollcdn.com/GENSHIN/Weapons/White_Tassel.png"
+                  alt="White Tassel">
+                <h2 class="weapon-name">White Tassel</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <div class="break"></div>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Whiteblind.png"
+                  alt="Whiteblind">
+                <h2 class="weapon-name">Whiteblind</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="bow" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Windblume_Ode.png"
+                  alt="Windblume Ode">
+                <h2 class="weapon-name">Windblume Ode</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="book" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Wine_and_Song.png"
+                  alt="Wine and Song">
+                <h2 class="weapon-name">Wine and Song</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Wolf-Fang.png"
+                  alt="Wolf-Fang">
+                <h2 class="weapon-name">Wolf-Fang</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="claymore" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity5" src="https://rerollcdn.com/GENSHIN/Weapons/Wolf's_Gravestone.png"
+                  alt="Wolf's Gravestone">
+                <h2 class="weapon-name">Wolf's <br> Gravestone</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="weapon-portrait" id="sword" href="/characters/jean/">
+                <img class="weapon-icon wp-rarity4" src="https://rerollcdn.com/GENSHIN/Weapons/Xiphos'_Moonlight.png"
+                  alt="Xiphos' Moonlight">
+                <h2 class="weapon-name">Xiphos'<br> Moonlight</h2>
+
+                <div class="sideprev">
+                  <img alt="Akuomaru" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

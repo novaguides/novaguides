@@ -1,0 +1,416 @@
+--TROIS CHANGELOG--
+--changelog--
+10/9/2023
+1. removed <body style="background-image:url('Genshin4k.jpg');"> from stylesheet and transferred it to main html
+2. changed main div opacity to 0.3
+3. started on eula page
+	- added dragonspine bg
+	- added eula portrait png
+	- added eula demo vid
+	- added table of contents
+
+4. added fontlib for icons = <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+--end log--
+
+--changelog--
+10/11/23
+1. continued on eula page:
+	- added talent section
+	- added passives section
+	- changed table of contents into a navbar
+	- added region image (contemplating if its good or not)
+	- added button for ascension guide
+	- added cons star points
+--end log--
+
+--changelog--
+10/12/23 8PM
+1. continued on eula page:
+	- added artifact section
+	- added weapon section
+	- added team composition section
+	- added summary section
+2. made all header div into 1
+3. added sys in content folder for misc page media
+--end log--
+
+10/12/23 12AM
+1. added 5 stars on eula's profile
+2. added scroll smooth on html
+3. added back to top on eula's page
+4. added hover on ascension show
+4. did weapon page
+	- added weapon desc,pic,rarity
+	- added refinement descriptions and buttons
+	- added ascension guide button
+	- added character recco
+5. changed dropdown z-index into 2
+--endlog--
+
+--TROIS CHANGELOG END--
+
+-- REN CHANGELOG --
+10/9/2023 8:48PM
+1. made feedback form bigger and a bit transparent, also added padding and drop shadow
+2. made draft character directory
+3. character icons and names can link t pages
+4. character icons become bigger on hover and have preview of character portrait
+
+10/10/2023 10:57 AM
+
+1. added characters to character section (need to arrange)
+2. added vertically scrollable div
+3. added dropshadow to image previews
+--REN CHANGELOG END--
+
+--ren changelog--
+10/10/2023 4:48PM
+1. changed background color of character icons
+2. sorted characters by elements (elements in alphabetical order) 
+still need to sort names alphabetically
+
+next to do: add side preview for all 
+
+to do later: finalize contact page, make weapon directory
+
+--ren change log--
+10/12/2023 10:13 AM
+1. updated about section
+
+--ren changelog--
+10/13/2023 1:39AM
+1. updated weapons section (placed all weapons with icons and names, need to change preview)
+
+--ren changelog--
+
+10/13/23 2:03AM
+1.combined seprate works into one folder, combined codes
+
+references to include
+Portrait Renders from DEG5270 on DeviantArt (https://www.deviantart.com/deg5270/gallery)
+Icons from Genshin.GG (https://genshin.gg)
+Background Image from Hoyoverse
+Videos from Hoyoverse Official Youtube Channel
+Information from Hoyoverse, other info insert
+
+--ren change log--
+10/13/2023 2:44AM
+
+1. added color and font-family to body css so that default text is white inter
+2. added stuff to artifacts (not complete)
+
+11/4/23 
+1. made twah.js file
+2. made traveler portrait change when clicked
+3. added transform to hover to indicate picture is clickable
+4. added constellation buttons
+	- removed description-alt classes 
+	- added more constellation classes
+5. fixed refinement buttons on sobp
+
+to do:
+a. fix buttons on weapon refinement 
+
+11/9/23
+1. added vision filter for characters
+	- added filter section in css
+	- removed break class in css
+	- fixed values in css for character and weapon list to arrange icons properly without break
+2. added weapon type filter for weapons
+3. added searchbar styles for every page bc apparently we havent done that hahahaha
+
+Remember: to copy and paste entire weapon and character list section in css
+
+- ren changelog start --
+11/07/2023 2:43 AM
+1. banner slideshow
+	*changes were made to the following:
+		- banner-image class for div renamed to banner-slideshow
+		- banner image class created for image sizing
+		- banner opacity changed to absolute position
+		- instead of having the image as a background for div,
+			the banner opacity and header content were just overlayed
+			over the banner slideshow
+			*buttons and elements are still on top and are clickable
+			only the image is in the bottom layer
+
+!!functions and contents need to be changed. 
+mostly copy pasted and revised from various
+sources for testing. have not had the chance to rename.
+will update this section if renamed already.
+1.5 created slideshow.js 
+
+2. created autoslides function in slideshow.js 
+
+can now change banner image through arrows but it will still change automatically
+
+--ren changelog --
+11-7-2023 9:01AM
+computer laboratory
+1. adjusted size of slideshow
+2. added circles
+3. circles are only outlines/borders, will fill on hover
+4. 
+
+--ren changelog-- 
+11-10-2023 2:19AM
+1. added slideshow to more webpgae - stopped adding so that i could finish search bar before copypasting in other pages
+2. created dropdown menu for search bar
+3. search results 
+4. adding new banner slideshow and search bar to all webpages
+
+--ren changelog--
+11-10-2023 9:12AM
+1. combined websites
+will be adjusting
+
+--ren changelog--
+12-3-23 4:21PM
+1. comment on css for easier organization (sort to categories, add comments for revisions)
+2. deleted banner-image class
+/*.banner-image {
+    background-image: url("Genshin4k.jpg");
+    background-size: cover;
+}*/
+
+3.deleted content-about class
+/*.content-about{
+    padding: 30px;
+    padding-bottom: 30px;
+    padding-left: 32%;
+    padding-top: 35px;
+    padding-right:3%;
+}*/
+
+4. found duplicate names (need to be compared and changed)(these are also marked with comments):
+- navbar
+- logo-header
+
+5. categories made:
+- applicable to all (for stuff like navbar, banner slideshows, basically the stuff that is seen on all webpages)
+- homepage (for stuff like the changeable main character, install buttons, and elements only used in the home page)
+- directories (for character and weapon directories, artifacts will have its own category because it doesn't use a directory format)
+- chararacter pages (for css rules related to characters)
+- weapon pages (for css rules specific to weapon pages)
+- artifacts (for css rules related to artifacts page)
+- about page (for css rules unique to the about page)
+- contact page (for css rules unique to contact page)
+- back to top (for the back to top css rules)
+- unknown (for stuff i'm not sure about)
+
+6. MOVED:
+- video and install table to homepage category
+- content-text and content-header to applicable to all
+- dropdown menu and navbar to applicable to all
+- moved constellations to character pages
+- moved filters to directories
+
+--ren changelog--
+attempting to change responsiveness!
+1. changed scaling for elements within banner-slideshow
+2. placed homepage content in a table (traveler image, video, etc.)
+3. changed scaling for homepage content
+!!copy paste stuff from applicable to all category and homepage category
+
+deleted/* !!! delete
+.banner-opacity {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 4%;
+    /* !!! maybe we can change this to id?*/
+*/
+
+/*
+.logo-header {  /*!!! there is another instance of logo header at the bottom! change and compare*/
+*/
+
+/*background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 20vw;
+    margin-left: 26%;
+    margin-right: 26%;
+    margin-bottom: 4%;
+    padding: 1px;
+    text-align: center;
+    color: white;
+    float: center;
+    width: inherit;
+*/
+    /* !!! mybe we can change this to id?*/
+
+
+!! media query sizes
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+7. deleted bg opacity long
+deleted/*
+.navbar 
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    font-family: inter;
+    font-weight: bold;
+*/
+
+basically
+1. changed scaling for home page
+	*revisions were made to both the banner-slideshow and content-body
+	so basically the whole webpage was revised
+		- used vw and vh units mostly
+		- changed a lot of stuff to inherit
+2. css rules under homepage and applicable to all were revised (not sure which anymore)
+3. created classes for background image so that we can just easily set the body to have those classes and have those bg images
+
+--ren changelog--
+12-9-2023
+2:05AM
+i will try to scale the about page goodluck god bless
+1. made new id about-infotable
+2. trasnferred information on about page to a table for better formatting
+
+deleted.about-genshin {
+    margin-left: -45vh;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+
+.about-novaguides,
+.about-builds {
+    background-image: url(Genshin4k.jpg);
+    margin-left: -47.9vh;
+    margin-right: -4.4vh;
+    padding-right: 6vh;
+    text-align: right;
+    margin-bottom: -3.5vh;
+}
+
+.bg-opacity-partial {  /*!!! what is this for?*/
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: 0vh;
+    padding-left: 5vh;
+    padding-bottom: 4vh;
+    padding-top: 6vh;
+    margin-right: -6vh;
+    padding-right: 5vh;
+}
+
+.about-bookmarks {
+    margin-left: -45vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.bookmark-list {
+    color: white;
+    font-family: inter;
+    font-size: 3vh;
+}
+
+.bookmark-list:hover {
+    font-weight: bolder;
+}*/
+
+.subheading {  /*!!! what is this for?*/
+    color: white;
+    font-family: inter;
+    font-size: 4vh;
+    margin-top: -3.5vh;
+    margin-bottom: -1.5vh;
+}
+
+
+
+.about-section {
+    margin-left: -50vh;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    padding-left: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    padding-right: 1.5vh;
+    display: block;
+    
+}
+
+.aboutnova{
+    margin-top:-3vh;
+}
+
+.about-section:hover{
+    background-color: #00000039;
+    transform: scale(1.5);
+    transform: translateX(1.7vh);
+}
+
+.onecolumn{ /*!!! what is this??*/
+    width: 30%;
+    display: inline-block;
+}
+
+.onecolumn hr{
+    margin-left: -45vh;
+    width: 250%;
+    height: 3px;
+}
+
+3. attempted to change scaling for contact page (in progress)
+
+--ren changelog--
+12-09-23 10:08PM
+1. transferred contact-info to contact page category
+
+*current issues with about page
+- text is not formatted well, format changes when scaling changes
+- paimon exits the parent div, will need to compare 
+to traveller image in homepage to make it behave
+similarly 
+- gaps in between table rows, too big but won't adjust either
+
+!!! search how to adjust gap between table rows
+!!! check the properties of the classes about-header and about-text
+
+*not able to work properly - have decided to just add comments to the code instead
+<!--  -->
+
+12-10-2023
+7:42AM
+1. revised scaling for about page
+- changed scaling for paimon image with id paimon
+- recreated table to better revise it
+- deleted id about-table
+- changed margins for class about-text
+- foir some reason there is a paragraph leftover at the top
+
+2. revise scaling for contact page
+-redid the table made last time
+(based on website inspect code console on chrome, it didnt read the whole thing as a table)
+
+3. revised the scaling for artifacts-page
+- removed unnecessary classes
+- removed unnecessary padding and margings from
+    previous css (these made the scaling way different)
+!!!for some reason the artifact info won't display on hover anymore huhu
+will need to fix that
+*issue resolved (it was just because i renamed a class to id)
+
+*will try to change format of artifacts list and try to
+implement a system similar to the directories for characters and weapons
+
+scaling done for artifacts page (as of now)
+
+4. revised scaling for weapon and character directories
+- new issue arose: items are no longer aligned inside box
+- need to media query filter buttons

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Artifacts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!--placeholder favicon-->
+  <link rel="stylesheet" href="StyleSheet.css"> <!--embedded style sheet-->
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet">
+</head>
+
+<body class="defaultbg">
+  <div class="bg-opacity">
+    <div class="main-div"> <!--when calling class in stylesheet make sure to use full stop-->
+      
+           <!-- banner changes start here (need to copy past)-->
+           
+      <div class="banner-slideshow"> <!--div for header/banner-->
+          <div class="banner slideshow-fade">
+              <img src="Banners/Banner1.jpg" class="banner-image">
+          </div>
+
+          <div class="banner slideshow-fade">
+              <img src="Banners/Banner2.jpg" class="banner-image">
+          </div>
+          
+          <div class="banner-opacity">
+              <div class="logo-header"> <!--div for name and logo-->
+                  <table>
+                  <tr>
+                      <td> <img src="logo.png" id="logo-image"></td>
+                      <td><h1 class="header-text">NOVA GUIDES</h1> <!--change font for this--></td>
+                  </tr>
+                  </table>
+              </div>
+
+              <div class="circle-container">
+                  <span class="slideshow-circle" onclick="currentSlide(1)"></span>
+                  <span class="slideshow-circle" onclick="currentSlide(2)"></span>
+              </div>
+
+              <div class="navbar"><!--div for nav bar-->
+                  <a href="Home.html">Home</a>
+                  <div class="dropdown">
+                      <a class="dropbtn">Guides <!--change to button if dropdown should be under "guides"-->
+                          <i class="fa fa-caret-down"></i>
+                      </a>
+                      <div class="dropdown-content">
+                          <a href="Characters.html">Characters</a>
+                          <a href="Weapons.html">Weapons</a>
+                          <a href="Artifacts.html">Artifacts</a>
+                      </div>
+                  </div>
+                  <a href="About.html">About</a>
+                  <a href="Contact.html">Contact</a>
+
+                  <!--searchbar changes start here-->
+
+                  <div class="search-container">
+                      <form autocomplete="off">
+                          <!--changes made to search bar!-->
+                          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                          <button type="submit" onclick="filterFunction()"><i class="fa fa-search"></i></button>
+                      </form>
+
+                      <div class="dropdown">
+                          <div id="search-list" class="dropdown-content">
+                              <!--navbar-->
+                              <a href="About.html">About</a>
+                              <a href="Characters.html">Characters</a>
+                              <a href="Weapons.html">Weapons</a>
+                              <a href="Contact.html">Contact</a>
+                              <a href="Artifacts.html">Artifcats</a>
+                              
+                              <!--characters--> <!--change the html links on the character and weapon page-->
+                              <a href="Eula.html">Eula</a>
+                              <a href="Albedo.html">Albedo</a>
+                              <a href="Alhaitham.html">Alhaitham</a>
+                              <a href="Aloy.html">Aloy</a>
+                              <a href="Amber.html">Amber</a>
+                              <a href="Itto.html">Arataki Itto</a>
+                              <a href="Baizhu.html">Baizhu</a>
+                              <a href="Barbara.html">Barbara</a>
+                              <a href="Beidou.html">Beidou</a>
+                              <a href="Bennett.html">Bennett</a>
+
+
+                              <!--weapons-->
+                              <a href="SoBP.html">Song of Broken Pines</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <script src="Search.js"></script> <!--transfer to near end of body-->
+
+                  <!--search bar ends here-->
+
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          </div>
+      </div>
+
+      <script src="Slideshow.js"></script>  <!--transfer to near end of body-->
+
+          <!--changes end here-->
+          
+      <div class="content-body"> <!--div for content--> <!--stuff is adjusted to comlab screen-->
+        <div id="about-artifacts">
+          <h1 class="artifact-header">ARTIFACTS</h1>
+
+          <p class="content-text">Artifacts are items in Genshin Impact that can be
+            equipped on Characters to increase their Stats. 
+            It is the second tab in the Inventory. There are 5 types of Artifacts that can be equipped: <b>Flower</b> of
+            Life,
+            <b>Plume</b> of Death, <b>Sands</b> of Eon, <b>Goblet</b> of Eonothem, and. <b>Circlet</b> of Logos.
+          </p>
+
+          <!--i think we can add a table here the different types of artifacts (their images)-->
+        </div>
+
+        <!--adventurer artifact set-->
+        <div class="artifact-parent" id="arti-rarity3">
+          <div class="artifacts" id="adventurer">
+            <h1 class="artifact-header">ADVENTURER</h1>
+
+            <!--need to change arti info scaling on main monitor. can't seem to acces it in secondary-->
+            <div id="arti-info">
+              <table class="table-left">
+
+                <tr>
+                  <td class="artifact-td-left">
+                    <h3>2-Piece Bonus</h3>
+                  </td>
+                  <td class="artifact-td-left">
+                    <h3>4-Piece Bonus</h3>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="artifact-td-left">
+                    <p>Max HP increased by 1,000</p>
+                  </td>
+                  <td class="artifact-td-left">
+                    <p>Opening chest regenerates 30% Max HP over 5s</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!--archaic petra artifact set-->
+        <div class="artifact-parent" id="arti-rarity5">
+          <div class="artifacts" id="archaicpetra">
+            <h1 class="artifact-header">ARCHAIC PETRA</h1>
+            
+            <div id="arti-info">
+              <table class="table-left">
+                <tr>
+                  <td class="artifact-td-left">
+                    <h3>2-Piece Bonus</h3>
+                  </td>
+                  <td class="artifact-td-left">
+                    <h3>4-Piece Bonus</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="artifact-td-left">
+                    <p>Gain a 15% Geo DMG Bonus.</p>
+                  </td>
+                  <td class="artifact-td-left">
+                    <p>Upon obtaining an Elemental Shard created through a Crystallize Reaction, <br>
+                      all party members gain a 35% DMG Bonus for that particular element for 10s. Only <br>
+                      one form of Elemental DMG Bonus can be gained in this manner at any one time.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!--berserker artifact set-->
+        <div class="artifact-parent" id="arti-rarity4">
+          <div class="artifacts" id="berserker">
+            <h1 class="artifact-header">BERSERKER</h1>
+           
+            <div id="arti-info">
+              <table class="table-left">
+                <tr>
+                  <td class="artifact-td-left">
+                    <h3>2-Piece Bonus</h3>
+                  </td>
+                  <td class="artifact-td-left">
+                    <h3>4-Piece Bonus</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="artifact-td-left">
+                    <p>CRIT Rate +12%</p>
+                  </td>
+                  <td class="artifact-td-left">
+                    <p>When HP is below 70%, CRIT Rate increases by an additional 24%.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

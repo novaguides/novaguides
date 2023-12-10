@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Characters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!--placeholder favicon-->
+  <link rel="stylesheet" href="StyleSheet.css"> <!--embedded style sheet-->
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet">
+  <script src="twah.js" defer></script>
+</head>
+
+<body class="defaultbg">
+  <div class="bg-opacity">
+    <div class="main-div"> <!--when calling class in stylesheet make sure to use full stop-->
+      
+             <!-- banner changes start here (need to copy past)-->
+           
+      <div class="banner-slideshow"> <!--div for header/banner-->
+          <div class="banner slideshow-fade">
+              <img src="Banners/Banner1.jpg" class="banner-image">
+          </div>
+
+          <div class="banner slideshow-fade">
+              <img src="Banners/Banner2.jpg" class="banner-image">
+          </div>
+          
+          <div class="banner-opacity">
+              <div class="logo-header"> <!--div for name and logo-->
+                  <table>
+                  <tr>
+                      <td> <img src="logo.png" id="logo-image"></td>
+                      <td><h1 class="header-text">NOVA GUIDES</h1> <!--change font for this--></td>
+                  </tr>
+                  </table>
+              </div>
+
+              <div class="circle-container">
+                  <span class="slideshow-circle" onclick="currentSlide(1)"></span>
+                  <span class="slideshow-circle" onclick="currentSlide(2)"></span>
+              </div>
+
+              <div class="navbar"><!--div for nav bar-->
+                  <a href="Home.html">Home</a>
+                  <div class="dropdown">
+                      <a class="dropbtn">Guides <!--change to button if dropdown should be under "guides"-->
+                          <i class="fa fa-caret-down"></i>
+                      </a>
+                      <div class="dropdown-content">
+                          <a href="Characters.html">Characters</a>
+                          <a href="Weapons.html">Weapons</a>
+                          <a href="Artifacts.html">Artifacts</a>
+                      </div>
+                  </div>
+                  <a href="About.html">About</a>
+                  <a href="Contact.html">Contact</a>
+
+                  <!--searchbar changes start here-->
+
+                  <div class="search-container">
+                      <form autocomplete="off">
+                          <!--changes made to search bar!-->
+                          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                          <button type="submit" onclick="filterFunction()"><i class="fa fa-search"></i></button>
+                      </form>
+
+                      <div class="dropdown">
+                          <div id="search-list" class="dropdown-content">
+                              <!--navbar-->
+                              <a href="About.html">About</a>
+                              <a href="Characters.html">Characters</a>
+                              <a href="Weapons.html">Weapons</a>
+                              <a href="Contact.html">Contact</a>
+                              <a href="Artifacts.html">Artifcats</a>
+                              
+                              <!--characters--> <!--change the html links on the character and weapon page-->
+                              <a href="Eula.html">Eula</a>
+                              <a href="Albedo.html">Albedo</a>
+                              <a href="Alhaitham.html">Alhaitham</a>
+                              <a href="Aloy.html">Aloy</a>
+                              <a href="Amber.html">Amber</a>
+                              <a href="Itto.html">Arataki Itto</a>
+                              <a href="Baizhu.html">Baizhu</a>
+                              <a href="Barbara.html">Barbara</a>
+                              <a href="Beidou.html">Beidou</a>
+                              <a href="Bennett.html">Bennett</a>
+
+
+                              <!--weapons-->
+                              <a href="SoBP.html">Song of Broken Pines</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <script src="Search.js"></script> <!--transfer to near end of body-->
+
+                  <!--search bar ends here-->
+
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          </div>
+      </div>
+      <script src="Slideshow.js"></script>  <!--transfer to near end of body-->
+      <!--or search where should js script be placed-->
+
+          <!--changes end here-->
+          
+      <div class="content-body"> <!--div for content--> <!--stuff is adjusted to comlab screen-->
+        
+        <div id="character-directory">
+          <h1 class="content-header">Characters</h1>
+
+          <div class="filter-buttons">
+            <button onclick="showAllCharacters()">Show All </button>
+              <img title="Anemo" src="content/sys/Element_Anemo.svg" onclick="filterCharactersByVision('anemo')" />
+              <img title="Geo" src="content/sys/Element_Geo.svg" onclick="filterCharactersByVision('geo')" />
+              <img title="Electro" src="content/sys/Element_Electro.svg" onclick="filterCharactersByVision('electro')" />
+              <img title="Dendro" src="content/sys/Element_Dendro.svg" onclick="filterCharactersByVision('dendro')" />
+              <img title="Hydro" src="content/sys/Element_Hydro.svg" onclick="filterCharactersByVision('hydro')" />
+              <img title="Pyro" src="content/sys/Element_Pyro.svg" onclick="filterCharactersByVision('pyro')" />
+              <img title="Cryo" src="content/sys/Element_Cryo.svg" onclick="filterCharactersByVision('cryo')" />
+          </div>
+
+          <div id="scroll"> <!--made a separate div to make the child div scrollable-->
+            <div class="character-list"> <!--still need to revise css for this-->
+
+              <!--anemo characters-->
+              <a class="character-portrait" id="anemo" href="/characters/jean/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Jean.png" class="character-icon rarity-5"
+                  id="anemo-portraitbg" alt="Jean">
+                <h2 class="character-name">Jean</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+              
+              <a class="character-portrait" id="anemo" href="/characters/kazuha/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Kazuha.png" class="character-icon rarity-5"
+                  id="anemo-portraitbg" alt="Kazuha">
+                <h2 class="character-name">Kazuha</h2>
+
+                <div class="sideprev">
+                  <img alt="Kazuha" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="anemo" href="/characters/traveler(anemo)/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Traveler (Anemo).png"
+                  class="character-icon rarity-5" id="anemo-portraitbg" alt="Traveler (Anemo)">
+                <h2 class="character-name">Traveler <br> (Anemo)</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="anemo" href="/characters/venti/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Venti.png" class="character-icon rarity-5"
+                  id="anemo-portraitbg" alt="Venti">
+                <h2 class="character-name">Venti</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="anemo" href="/characters/xiao/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Xiao.png" class="character-icon rarity-5"
+                  id="anemo-portraitbg" alt="Xiao">
+                <h2 class="character-name">Xiao</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="anemo" href="/characters/wanderer/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Wanderer.png" class="character-icon rarity-5"
+                  id="anemo-portraitbg" alt="Wanderer">
+                <h2 class="character-name">Wanderer</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="character-portrait" id="anemo" href="/characters/faruzan/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Faruzan.png" class="character-icon rarity-4"
+                  id="anemo-portraitbg" alt="Faruzan">
+                <h2 class="character-name">Faruzan</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="anemo" href="/characters/heizou/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Heizou.png" class="character-icon rarity-4"
+                  id="anemo-portraitbg" alt="Heizou">
+                <h2 class="character-name">Heizou</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="anemo" href="/characters/lynette/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Lynette.png" class="character-icon rarity-4"
+                  id="anemo-portraitbg" alt="Lynette">
+                <h2 class="character-name">Lynette</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="anemo" href="/characters/sucrose/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Sucrose.png" class="character-icon rarity-4"
+                  id="anemo-portraitbg" alt="Sucrose">
+                <h2 class="character-name">Sucrose</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="anemo" href="/characters/sayu/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Sayu.png" class="character-icon rarity-4"
+                  id="anemo-portraitbg" alt="Sayu">
+                <h2 class="character-name">Sayu</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <!--cryo characters-->
+
+              <a class="character-portrait" id="cryo" href="/characters/aloy/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Aloy.png" class="character-icon rarity-5"
+                  id="cryo-portraitbg" alt="Aloy">
+                <h2 class="character-name">Aloy</h2>
+
+                <div class="sideprev">
+                  <img alt="Albedo" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="character-portrait" id="cryo" href="/characters/ayaka/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Ayaka.png" class="character-icon rarity-5"
+                  id="cryo-portraitbg" alt="Ayaka">
+                <h2 class="character-name">Ayaka</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="Eula.html">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Eula.png" class="character-icon rarity-5"
+                  id="cryo-portraitbg" alt="Eula">
+                <h2 class="character-name">Eula</h2>
+
+                <div class="sideprev">
+                  <img alt="Eula" class="previewimg" src="CharDirec_Eula.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="/characters/ganyu/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Ganyu.png" class="character-icon rarity-5"
+                  id="cryo-portraitbg" alt="Ganyu">
+                <h2 class="character-name">Ganyu</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="/characters/qiqi/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Qiqi.png" class="character-icon rarity-5"
+                  id="cryo-portraitbg" alt="Qiqi">
+                <h2 class="character-name">Qiqi</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="/characters/shenhe/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Shenhe.png" class="character-icon rarity-5"
+                  id="cryo-portraitbg" alt="Shenhe">
+                <h2 class="character-name">Shenhe</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="/characters/chongyun/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Chongyun.png" class="character-icon rarity-4"
+                  id="cryo-portraitbg" alt="Chongyun">
+                <h2 class="character-name">Chongyun</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="character-portrait" id="cryo" href="/characters/diona/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Diona.png" class="character-icon rarity-4"
+                  id="cryo-portraitbg" alt="Diona">
+                <h2 class="character-name">Diona</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait character-new" id="cryo" href="/characters/freminet/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Freminet.png" class="character-icon rarity-4"
+                  id="cryo-portraitbg" alt="Freminet">
+                <h2 class="character-name">Freminet</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="/characters/kaeya/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Kaeya.png" class="character-icon rarity-4"
+                  id="cryo-portraitbg" alt="Kaeya">
+                <h2 class="character-name">Kaeya</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="/characters/layla/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Layla.png" class="character-icon rarity-4"
+                  id="cryo-portraitbg" alt="Layla">
+                <h2 class="character-name">Layla</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="/characters/mika/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Mika.png" class="character-icon rarity-4"
+                  id="cryo-portraitbg" alt="Mika">
+                <h2 class="character-name">Mika</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="cryo" href="/characters/rosaria/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Rosaria.png" class="character-icon rarity-4"
+                  id="cryo-portraitbg" alt="Rosaria">
+                <h2 class="character-name">Rosaria</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <!--dendro characters-->
+
+              <a class="character-portrait" id="dendro" href="/characters/alhaitham/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Alhaitham.png" class="character-icon rarity-5"
+                  id="dendro-portraitbg" alt="Alhaitham">
+                <h2 class="character-name">Alhaitham</h2>
+
+                <div class="sideprev"> <!--division for the preview that appears on the side on hover-->
+                  <img alt="Alhaitham" class="previewimg" src="CharDirec_Alhaitham.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="dendro" href="/characters/baizhu/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Baizhu.png" class="character-icon rarity-5"
+                  id="dendro-portraitbg" alt="Baizhu">
+                <h2 class="character-name">Baizhu</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="dendro" href="/characters/nahida/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Nahida.png" class="character-icon rarity-5"
+                  id="dendro-portraitbg" alt="Nahida">
+                <h2 class="character-name">Nahida</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="dendro" href="/characters/tighnari/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Tighnari.png" class="character-icon rarity-5"
+                  id="dendro-portraitbg" alt="Tighnari">
+                <h2 class="character-name">Tighnari</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="dendro" href="/characters/traveler(dendro)/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Traveler (Dendro).png"
+                  class="character-icon rarity-5" id="dendro-portraitbg" alt="Traveler (Dendro)">
+                <h2 class="character-name">Traveler <br> (Dendro)</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="dendro" href="/characters/collei/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Collei.png" class="character-icon rarity-4"
+                  id="dendro-portraitbg" alt="Collei">
+                <h2 class="character-name">Collei</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="dendro" href="/characters/kaveh/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Kaveh.png" class="character-icon rarity-4"
+                  id="dendro-portraitbg" alt="Kaveh">
+                <h2 class="character-name">Kaveh</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="dendro" href="/characters/kirara/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Kirara.png" class="character-icon rarity-4"
+                  id="dendro-portraitbg" alt="Kirara">
+                <h2 class="character-name">Kirara</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="dendro" href="/characters/yaoyao/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Yaoyao.png" class="character-icon rarity-4"
+                  id="dendro-portraitbg" alt="Yaoyao">
+                <h2 class="character-name">Yaoyao</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <!--electro characters-->
+
+              <a class="character-portrait" id="electro" href="/characters/cyno/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Cyno.png" class="character-icon rarity-5"
+                  id="electro-portraitbg" alt="Cyno">
+                <h2 class="character-name">Cyno</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/keqing/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Keqing.png" class="character-icon rarity-5"
+                  id="electro-portraitbg" alt="Keqing">
+                <h2 class="character-name">Keqing</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/raiden/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Raiden.png" class="character-icon rarity-5"
+                  id="electro-portraitbg" alt="Raiden">
+                <h2 class="character-name">Raiden</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/traveler(electro)/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Traveler (Electro).png"
+                  class="character-icon rarity-5" id="electro-portraitbg" alt="Traveler (Electro)">
+                <h2 class="character-name">Traveler <br> (Electro)</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/yaemiko/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Yae Miko.png" class="character-icon rarity-5"
+                  id="electro-portraitbg" alt="Yae Miko">
+                <h2 class="character-name">Yae Miko</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/beidou/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Beidou.png" class="character-icon rarity-4"
+                  id="electro-portraitbg" alt="Beidou">
+                <h2 class="character-name">Beidou</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/dori/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Dori.png" class="character-icon rarity-4"
+                  id="electro-portraitbg" alt="Dori">
+                <h2 class="character-name">Dori</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/fischl/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Fischl.png" class="character-icon rarity-4"
+                  id="electro-portraitbg" alt="Fischl">
+                <h2 class="character-name">Fischl</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/kukishinobu/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Kuki Shinobu.png" class="character-icon rarity-4"
+                  id="electro-portraitbg" alt="Kuki Shinobu">
+                <h2 class="character-name">Kuki Shinobu</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/lisa/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Lisa.png" class="character-icon rarity-4"
+                  id="electro-portraitbg" alt="Lisa">
+                <h2 class="character-name">Lisa</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/sara/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Sara.png" class="character-icon rarity-4"
+                  id="electro-portraitbg" alt="Sara">
+                <h2 class="character-name">Sara</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="electro" href="/characters/razor/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Razor.png" class="character-icon rarity-4"
+                  id="electro-portraitbg" alt="Razor">
+                <h2 class="character-name">Razor</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <!--geo characters-->
+
+              <a href="/characters/albedo/" id="geo" class="character-portrait">
+                <img alt="Albedo" class="character-icon rarity-5" id="geo-portraitbg"
+                  src="https://rerollcdn.com/GENSHIN/Characters/1/Albedo.png">
+                <h2 class="character-name">Albedo</h2>
+
+                <div class="sideprev">
+                  <img alt="Albedo" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="geo" href="/characters/itto/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Itto.png" class="character-icon rarity-5"
+                  id="geo-portraitbg" alt="Itto">
+                <h2 class="character-name">Itto</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="geo" href="/characters/traveler(geo)/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Traveler (Geo).png" class="character-icon rarity-5"
+                  id="geo-portraitbg" alt="Traveler (Geo)">
+                <h2 class="character-name">Traveler <br> (Geo)</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="geo" href="/characters/zhongli/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Zhongli.png" class="character-icon rarity-5"
+                  id="geo-portraitbg" alt="Zhongli">
+                <h2 class="character-name">Zhongli</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="geo" href="/characters/gorou/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Gorou.png" class="character-icon rarity-4"
+                  id="geo-portraitbg" alt="Gorou">
+                <h2 class="character-name">Gorou</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="geo" href="/characters/ningguang/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Ningguang.png" class="character-icon rarity-4"
+                  id="geo-portraitbg" alt="Ningguang">
+                <h2 class="character-name">Ningguang</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="geo" href="/characters/noelle/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Noelle.png" class="character-icon rarity-4"
+                  id="geo-portraitbg" alt="Noelle">
+                <h2 class="character-name">Noelle</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="geo" href="/characters/yunjin/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Yun Jin.png" class="character-icon rarity-4"
+                  id="geo-portraitbg" alt="Yun Jin">
+                <h2 class="character-name">Yun Jin</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <!--hydro characters-->
+
+              <a class="character-portrait" id="hydro" href="/characters/ayato/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Ayato.png" class="character-icon rarity-5"
+                  id="hydro-portraitbg" alt="Ayato">
+                <h2 class="character-name">Ayato</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="hydro" href="/characters/childe/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Childe.png" class="character-icon rarity-5"
+                  id="hydro-portraitbg" alt="Childe">
+                <h2 class="character-name">Childe</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="hydro" href="/characters/kokomi/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Kokomi.png" class="character-icon rarity-5"
+                  id="hydro-portraitbg" alt="Kokomi">
+                <h2 class="character-name">Kokomi</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="hydro" href="/characters/mona/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Mona.png" class="character-icon rarity-5"
+                  id="hydro-portraitbg" alt="Mona">
+                <h2 class="character-name">Mona</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="hydro" href="/characters/nilou/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Nilou.png" class="character-icon rarity-5"
+                  id="hydro-portraitbg" alt="Nilou">
+                <h2 class="character-name">Nilou</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="hydro" href="/characters/traveler(hydro)/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Traveler (Hydro).png"
+                  class="character-icon rarity-5" id="hydro-portraitbg" alt="Traveler (Hydro)">
+                <h2 class="character-name">Traveler <br> (Hydro)</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="hydro" href="/characters/yelan/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Yelan.png" class="character-icon rarity-5"
+                  id="hydro-portraitbg" alt="Yelan">
+                <h2 class="character-name">Yelan</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="character-portrait" id="hydro" href="/characters/barbara/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Barbara.png" class="character-icon rarity-4"
+                  id="hydro-portraitbg" alt="Barbara">
+                <h2 class="character-name">Barbara</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="hydro" href="/characters/candace/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Candace.png" class="character-icon rarity-4"
+                  id="hydro-portraitbg" alt="Candace">
+                <h2 class="character-name">Candace</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="hydro" href="/characters/xingqiu/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Xingqiu.png" class="character-icon rarity-4"
+                  id="hydro-portraitbg" alt="Xingqiu">
+                <h2 class="character-name">Xingqiu</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <!--pyro characters-->
+
+              <a class="character-portrait" id="pyro" href="/characters/xinyan/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Xinyan.png" class="character-icon rarity-4"
+                  id="pyro-portraitbg" alt="Xinyan">
+                <h2 class="character-name">Xinyan</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/dehya/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Dehya.png" class="character-icon rarity-5"
+                  id="pyro-portraitbg" alt="Dehya">
+                <h2 class="character-name">Dehya</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/diluc/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Diluc.png" class="character-icon rarity-5"
+                  id="pyro-portraitbg" alt="Diluc">
+                <h2 class="character-name">Diluc</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+
+              <a class="character-portrait" id="pyro" href="/characters/hutao/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Hu Tao.png" class="character-icon rarity-5"
+                  id="pyro-portraitbg" alt="Hu Tao">
+                <h2 class="character-name">Hu Tao</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/klee/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Klee.png" class="character-icon rarity-5"
+                  id="pyro-portraitbg" alt="Klee">
+                <h2 class="character-name">Klee</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/lyney/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Lyney.png" class="character-icon rarity-5"
+                  id="pyro-portraitbg" alt="Lyney">
+                <h2 class="character-name">Lyney</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/yoimiya/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Yoimiya.png" class="character-icon rarity-5"
+                  id="pyro-portraitbg" alt="Yoimiya">
+                <h2 class="character-name">Yoimiya</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/amber/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Amber.png" class="character-icon rarity-4"
+                  id="pyro-portraitbg" alt="Amber">
+                <h2 class="character-name">Amber</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/bennett/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Bennett.png" class="character-icon rarity-4"
+                  id="pyro-portraitbg" alt="Bennett">
+                <h2 class="character-name">Bennett</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/thoma/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Thoma.png" class="character-icon rarity-4"
+                  id="pyro-portraitbg" alt="Thoma">
+                <h2 class="character-name">Thoma</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/xiangling/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Xiangling.png" class="character-icon rarity-4"
+                  id="pyro-portraitbg" alt="Xiangling">
+                <h2 class="character-name">Xiangling</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+              <a class="character-portrait" id="pyro" href="/characters/yanfei/">
+                <img src="https://rerollcdn.com/GENSHIN/Characters/1/Yanfei.png" class="character-icon rarity-4"
+                  id="pyro-portraitbg" alt="Yanfei">
+                <h2 class="character-name">Yanfei</h2>
+
+                <div class="sideprev">
+                  <img alt="Jean" class="previewimg" src="CharDirec_Albedo.png">
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
